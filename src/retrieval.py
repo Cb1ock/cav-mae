@@ -5,7 +5,9 @@
 # @Email   : yuangong@mit.edu
 # @File    : retrieval.py
 
-# supervised (cav-mae pretrain and evaluated on AS) and zero-shot (cav-mae pretrained on AS-2M and eval retrieval on VGGSound) retrieval experiments
+# supervised (cav-mae pretrain and evaluated on AS) 
+# and 
+# zero-shot (cav-mae pretrained on AS-2M and eval retrieval on VGGSound) retrieval experiments
 
 import argparse
 import os
