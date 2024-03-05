@@ -19,7 +19,7 @@ class PatchEmbed(nn.Module):
     def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
         super().__init__()
 
-        img_size = to_2tuple(img_size)
+        img_size = to_2tuple(img_size) # to_2tuple function will turn 224 to (224, 224)
         patch_size = to_2tuple(patch_size)
         num_patches = (img_size[1] // patch_size[1]) * (img_size[0] // patch_size[0])
         self.img_size = img_size
@@ -28,9 +28,11 @@ class PatchEmbed(nn.Module):
 
         self.proj = nn.Conv2d(in_chans, embed_dim, kernel_size=patch_size, stride=patch_size)
 
-    def forward(self, x):
-        x = self.proj(x).flatten(2).transpose(1, 2)
-        return x
+    def forward(self, x): # x shape is (batch_size, embed_dim, H, W)
+
+        x = self.proj(x).flatten(2) # flatten the last two dimensions, so x shape is (batch_size, embed_dim, num_patches), and num_patches = H * W
+        x = x.transpose(1, 2)
+        return x # (batch_size, num_patches, embed_dim)
 
 class Block(nn.Module):
     def __init__(self, dim, num_heads, mlp_ratio=4., qkv_bias=False, qk_scale=None, drop=0., attn_drop=0.,
