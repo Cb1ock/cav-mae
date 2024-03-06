@@ -14,6 +14,10 @@ import timm
 from timm.models.layers import to_2tuple, trunc_normal_, DropPath
 from timm.models.vision_transformer import Attention, Mlp, PatchEmbed, Block
 from .pos_embed import get_2d_sincos_pos_embed
+from transformers import BertTokenizer, BertModel
+
+
+
 
 class PatchEmbed(nn.Module):
     def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
@@ -83,6 +87,11 @@ class CAVMAE(nn.Module):
 
         self.patch_embed_a = PatchEmbed(img_size, patch_size, 1, embed_dim)
         self.patch_embed_v = PatchEmbed(img_size, patch_size, in_chans, embed_dim)
+        #self.word_embed_t = nn.Embedding(10000, embed_dim)
+
+        # load pre-trained BERT model
+        self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+        self.model_bert = BertModel.from_pretrained('bert-base-uncased')
 
         self.patch_embed_a.num_patches = int(audio_length * 128 / 256)
         print('Number of Audio Patches: {:d}, Visual Patches: {:d}'.format(self.patch_embed_a.num_patches, self.patch_embed_v.num_patches))
@@ -269,7 +278,7 @@ class CAVMAE(nn.Module):
 
         return x_masked, mask, ids_restore
 
-    def forward_encoder(self, a, v, mask_ratio_a, mask_ratio_v, mask_mode='unstructured'):
+    def forward_encoder(self, a, v, t, mask_ratio_a, mask_ratio_v, mask_mode='unstructured'):
         # embed patches
         a = a.unsqueeze(1)
         a = a.transpose(2, 3)
@@ -280,6 +289,12 @@ class CAVMAE(nn.Module):
         v = self.patch_embed_v(v)
         v = v + self.pos_embed_v
         v = v + self.modality_v
+
+        # t = self.word_embed_t(t)
+        # t = t + self.pos_embed_t
+        # t = t + self.modality_t
+        text_features = self.model_bert(t)
+        sequence_output = text_features[0]
 
         # by default, we always use unstructured masking
         if mask_mode == 'unstructured':
@@ -313,7 +328,7 @@ class CAVMAE(nn.Module):
             cv = blk(v, 'v')
         cv = self.norm_v(cv)
 
-        return x, mask_a, ids_restore_a, mask_v, ids_restore_v, ca, cv
+        return x, mask_a, ids_restore_a, mask_v, ids_restore_v, ca, cv, sequence_output
 
     def forward_decoder(self, x, mask_a, ids_restore_a, mask_v, ids_restore_v):
 
@@ -395,12 +410,12 @@ class CAVMAE(nn.Module):
         loss = (loss * mask).sum() / mask.sum()  # mean loss on removed patches
         return loss
 
-    def forward(self, audio, imgs, mask_ratio_a=0.75, mask_ratio_v=0.75, mae_loss_weight=1., contrast_loss_weight=0.01, mask_mode='unstructured'):
-        # latent is used for reconstruction (mae), latent_c_{a,v} are used for contrastive learning
-        latent, mask_a, ids_restore_a, mask_v, ids_restore_v, latent_c_a, latent_c_v = self.forward_encoder(audio, imgs, mask_ratio_a, mask_ratio_v, mask_mode=mask_mode)
+    def forward(self, audio, imgs, txt,  mask_ratio_a=0.75, mask_ratio_v=0.75, mae_loss_weight=1., contrast_loss_weight=0.005, mask_mode='unstructured'):
+        # latent is used for reconstruction (mae), latent_c_{a,v} are used for contrastive learning, latent_t is used for contrastive too
+        latent, mask_a, ids_restore_a, mask_v, ids_restore_v, latent_c_a, latent_c_v, latent_c_t = self.forward_encoder(audio, imgs, txt, mask_ratio_a, mask_ratio_v, mask_mode=mask_mode)
         # if mae loss is used
         if mae_loss_weight != 0:
-            pred_a, pred_v = self.forward_decoder(latent, mask_a, ids_restore_a, mask_v, ids_restore_v)
+            pred_a, pred_v, pred_t = self.forward_decoder(latent, mask_a, ids_restore_a, mask_v, ids_restore_v)
             loss_mae_a = self.forward_mae_loss(audio, pred_a, mask_a, 'a')
             loss_mae_v = self.forward_mae_loss(imgs, pred_v, mask_v, 'v')
             loss_mae = mae_loss_weight * (loss_mae_a + loss_mae_v)
@@ -410,14 +425,20 @@ class CAVMAE(nn.Module):
         # if contrastive loss is used
         if contrast_loss_weight != 0:
             # note this is single directional
-            loss_c, c_acc = self.forward_contrastive(latent_c_a.mean(dim=1), latent_c_v.mean(dim=1))
-            loss_c = contrast_loss_weight * loss_c
+            loss_c_av, c_acc = self.forward_contrastive(latent_c_a.mean(dim=1), latent_c_v.mean(dim=1))
+            loss_c_at, c_acc_at = self.forward_contrastive(latent_c_a.mean(dim=1), latent_c_t.mean(dim=1)) #TODO: the comparison between at and vt may require other logic
+            loss_c_vt, c_acc_vt = self.forward_contrastive(latent_c_v.mean(dim=1), latent_c_t.mean(dim=1))
+            loss_c_av = contrast_loss_weight * loss_c_av
+            loss_c_at = contrast_loss_weight * loss_c_at
+            loss_c_vt = contrast_loss_weight * loss_c_vt
         else:
-            loss_c, c_acc = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
+            loss_c_av, c_acc = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
+            loss_c_at, c_acc_at = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
+            loss_c_vt, c_acc_vt = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
 
-        loss = loss_mae + loss_c
+        loss = loss_mae + loss_c_av + loss_c_at + loss_c_vt
 
-        return loss, loss_mae, loss_mae_a, loss_mae_v, loss_c, mask_a, mask_v, c_acc
+        return loss, loss_mae, loss_mae_a, loss_mae_v, loss_c_av, mask_a, mask_v, c_acc, loss_c_vt, loss_c_at, c_acc_at, c_acc_vt
 
     # used only for inpainting, ignore if inpainting is not of interest
     def forward_inpaint(self, audio, imgs, mask_ratio_a=0.75, mask_ratio_v=0.75, mask_mode='unstructured'):

@@ -26,7 +26,7 @@ def train(audio_model, train_loader, test_loader, args):
     torch.set_grad_enabled(True)
 
     batch_time, per_sample_time, data_time, per_sample_data_time, per_sample_dnn_time = AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter()
-    loss_av_meter, loss_a_meter, loss_v_meter, loss_c_meter = AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter()
+    loss_av_meter, loss_a_meter, loss_v_meter, loss_c_av_meter, loss_c_at_meter, loss_c_vt_meter = AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter()
     progress = []
 
     best_epoch, best_loss = 0, np.inf
@@ -78,20 +78,22 @@ def train(audio_model, train_loader, test_loader, args):
         print("current #epochs=%s, #steps=%s" % (epoch, global_step))
         print('current masking ratio is {:.3f} for both modalities; audio mask mode {:s}'.format(args.masking_ratio, args.mask_mode))
 
-        for i, (a_input, v_input, _) in enumerate(train_loader):
+        for i, (a_input, v_input, t_input) in enumerate(train_loader):
 
             B = a_input.size(0)
             a_input = a_input.to(device, non_blocking=True)
             v_input = v_input.to(device, non_blocking=True)
+            t_input = t_input.to(device, non_blocking=True)
 
             data_time.update(time.time() - end_time)
             per_sample_data_time.update((time.time() - end_time) / a_input.shape[0])
             dnn_start_time = time.time()
 
-            with autocast():
-                loss, loss_mae, loss_mae_a, loss_mae_v, loss_c, mask_a, mask_v, c_acc = audio_model(a_input, v_input, args.masking_ratio, args.masking_ratio, mae_loss_weight=args.mae_loss_weight, contrast_loss_weight=args.contrast_loss_weight, mask_mode=args.mask_mode)
+            with autocast(): 
+                loss, loss_mae, loss_mae_a, loss_mae_v, loss_c_av, mask_a, mask_v, c_acc, loss_c_vt, loss_c_at, c_acc_at, c_acc_vt = audio_model(a_input, v_input, t_input, args.masking_ratio, args.masking_ratio, mae_loss_weight=args.mae_loss_weight, contrast_loss_weight=args.contrast_loss_weight, mask_mode=args.mask_mode)
+                #loss, loss_mae, loss_mae_a, loss_mae_v, loss_c, mask_a, mask_v, c_acc = audio_model(a_input, v_input, t_input, args.masking_ratio, args.masking_ratio, mae_loss_weight=args.mae_loss_weight, contrast_loss_weight=args.contrast_loss_weight, mask_mode=args.mask_mode)
                 # this is due to for torch.nn.DataParallel, the output loss of 4 gpus won't be automatically averaged, need to be done manually
-                loss, loss_mae, loss_mae_a, loss_mae_v, loss_c, c_acc = loss.sum(), loss_mae.sum(), loss_mae_a.sum(), loss_mae_v.sum(), loss_c.sum(), c_acc.mean()
+                loss, loss_mae, loss_mae_a, loss_mae_v, loss_c_av, c_acc, loss_c_vt, loss_c_at, a_acc_at, c_acc_vt = loss.sum(), loss_mae.sum(), loss_mae_a.sum(), loss_mae_v.sum(), loss_c_av.sum(), c_acc.mean(), loss_c_vt.sum(), loss_c_at.sum(), c_acc_at.mean(), c_acc_vt.mean()
 
             optimizer.zero_grad()
             scaler.scale(loss).backward()
@@ -102,7 +104,9 @@ def train(audio_model, train_loader, test_loader, args):
             loss_av_meter.update(loss.item(), B)
             loss_a_meter.update(loss_mae_a.item(), B)
             loss_v_meter.update(loss_mae_v.item(), B)
-            loss_c_meter.update(loss_c.item(), B)
+            loss_c_av_meter.update(loss_c_av.item(), B)
+            loss_c_vt_meter.update(loss_c_vt.item(), B)
+            loss_c_at_meter.update(loss_c_at.item(), B)
             batch_time.update(time.time() - end_time)
             per_sample_time.update((time.time() - end_time)/a_input.shape[0])
             per_sample_dnn_time.update((time.time() - dnn_start_time)/a_input.shape[0])
@@ -119,10 +123,14 @@ def train(audio_model, train_loader, test_loader, args):
                   'Train Total Loss {loss_av_meter.val:.4f}\t'
                   'Train MAE Loss Audio {loss_a_meter.val:.4f}\t'
                   'Train MAE Loss Visual {loss_v_meter.val:.4f}\t'
-                  'Train Contrastive Loss {loss_c_meter.val:.4f}\t'
-                  'Train Contrastive Acc {c_acc:.3f}\t'.format(
+                  'Train av Contrastive Loss {loss_c_av_meter.val:.4f}\t'
+                  'Trian at Contrastive Loss {loss_c_at_meter.val:.4f}\t'
+                  'Trian vt Contrastive Loss {loss_c_vt_meter.val:.4f}\t'
+                  'Train av Contrastive Acc {c_acc:.3f}\t'
+                  'Train av Contrastive Acc {c_acc_at:.3f}\t'
+                  'Train av Contrastive Acc {c_acc_vt:.3f}\t'.format(
                    epoch, i, len(train_loader), per_sample_time=per_sample_time, per_sample_data_time=per_sample_data_time,
-                      per_sample_dnn_time=per_sample_dnn_time, loss_av_meter=loss_av_meter, loss_a_meter=loss_a_meter, loss_v_meter=loss_v_meter, loss_c_meter=loss_c_meter, c_acc=c_acc), flush=True)
+                      per_sample_dnn_time=per_sample_dnn_time, loss_av_meter=loss_av_meter, loss_a_meter=loss_a_meter, loss_v_meter=loss_v_meter, loss_c_av_meter=loss_c_av_meter, c_acc=c_acc, loss_c_at_meter=loss_c_at_meter, loss_c_vt_meter=loss_c_vt_meter, c_acc_at=c_acc_at, c_acc_vt=c_acc_vt), flush=True)
                 if np.isnan(loss_av_meter.avg):
                     print("training diverged...")
                     return
@@ -130,6 +138,7 @@ def train(audio_model, train_loader, test_loader, args):
             end_time = time.time()
             global_step += 1
 
+        # TODO:The verification code also needs to be modified
         print('start validation')
         eval_loss_av, eval_loss_mae, eval_loss_mae_a, eval_loss_mae_v, eval_loss_c, eval_c_acc = validate(audio_model, test_loader, args)
 
@@ -142,12 +151,12 @@ def train(audio_model, train_loader, test_loader, args):
 
         print("Train Audio MAE Loss: {:.6f}".format(loss_a_meter.avg))
         print("Train Visual MAE Loss: {:.6f}".format(loss_v_meter.avg))
-        print("Train Contrastive Loss: {:.6f}".format(loss_c_meter.avg))
+        print("Train Contrastive Loss: {:.6f}".format(loss_c_av_meter.avg))
         print("Train Total Loss: {:.6f}".format(loss_av_meter.avg))
 
         # train audio mae loss, train visual mae loss, train contrastive loss, train total loss
         # eval audio mae loss, eval visual mae loss, eval contrastive loss, eval total loss, eval contrastive accuracy, lr
-        result[epoch-1, :] = [loss_a_meter.avg, loss_v_meter.avg, loss_c_meter.avg, loss_av_meter.avg, eval_loss_mae_a, eval_loss_mae_v, eval_loss_c, eval_loss_av, eval_c_acc, optimizer.param_groups[0]['lr']]
+        result[epoch-1, :] = [loss_a_meter.avg, loss_v_meter.avg, loss_c_av_meter.avg, loss_av_meter.avg, eval_loss_mae_a, eval_loss_mae_v, eval_loss_c, eval_loss_av, eval_c_acc, optimizer.param_groups[0]['lr']]
         np.savetxt(exp_dir + '/result.csv', result, delimiter=',')
         print('validation finished')
 
@@ -184,7 +193,7 @@ def train(audio_model, train_loader, test_loader, args):
         loss_av_meter.reset()
         loss_a_meter.reset()
         loss_v_meter.reset()
-        loss_c_meter.reset()
+        loss_c_av_meter.reset()
 
 def validate(audio_model, val_loader, args):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
