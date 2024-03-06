@@ -83,15 +83,19 @@ if __name__ == "__main__":
     #         print('error with ', print(input_filelist[file_id]))
 
     input_filelist = np.loadtxt(args.input_file_list, dtype=str, delimiter=',')
-    if input_filelist.ndim == 1:
-        num_file = 1
-        input_filelist = np.array([input_filelist])
-    else:
-        num_file = input_filelist.shape[0]
-    print('Total {:d} videos are input'.format(num_file))
+    print(input_filelist)
+    # if input_filelist.ndim == 1:
+    #     num_file = 1
+    #     input_filelist = np.array([input_filelist])
+    # else:
+    num_file = input_filelist.shape[0]
+    print(input_filelist)
+    print(f'Total {num_file} videos are input')
     for file_id in range(num_file):
         try:
-            print('processing video {:d}: {:s}'.format(file_id, input_filelist[file_id]))
-            extract_frame(input_filelist[file_id], args.target_fold)
+            print(f'processing video {file_id}: {input_filelist[file_id]}')
+            extract_frame(input_filelist[file_id], args.target_fold + f'/{file_id}')
         except:
             print('error with ', print(input_filelist[file_id]))
+    
+    extract_frame('./sample_video/KlsG1EnBEjc_000361.mp4', args.target_fold)
