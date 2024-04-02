@@ -52,7 +52,7 @@ if __name__ == "__main__":
     from argparse import ArgumentParser
     parser = ArgumentParser(description="Python script to extract frames from a video, save as jpgs.")
     parser.add_argument("-input_file_list", type=str, default='/home/hao/Project/cav-mae/src/preprocess/celebvtext_video_list.csv', help="Should be a csv file of a single columns, each row is the input video path.")
-    parser.add_argument("-target_fold", type=str, default='/data/public_datasets/CelebV-Text/video/frames_1frame_for_1video', help="The place to store the video frames.")
+    parser.add_argument("-target_fold", type=str, default='/data/public_datasets/CelebV-Text/video/frames_10frame_for_1video', help="The place to store the video frames.")
     args = parser.parse_args()
 
     # note the first row (header) is skipped
