@@ -426,19 +426,19 @@ class CAVMAE(nn.Module):
         if contrast_loss_weight != 0:
             # note this is single directional
             loss_c_av, c_acc = self.forward_contrastive(latent_c_a.mean(dim=1), latent_c_v.mean(dim=1))
-            loss_c_at, c_acc_at = self.forward_contrastive(latent_c_a.mean(dim=1), latent_c_t.mean(dim=1)) #TODO: the comparison between at and vt may require other logic
-            loss_c_vt, c_acc_vt = self.forward_contrastive(latent_c_v.mean(dim=1), latent_c_t.mean(dim=1))
+            # loss_c_at, c_acc_at = self.forward_contrastive(latent_c_a.mean(dim=1), latent_c_t.mean(dim=1)) #TODO: the comparison between at and vt may require other logic
+            # loss_c_vt, c_acc_vt = self.forward_contrastive(latent_c_v.mean(dim=1), latent_c_t.mean(dim=1))
             loss_c_av = contrast_loss_weight * loss_c_av
-            loss_c_at = contrast_loss_weight * loss_c_at
-            loss_c_vt = contrast_loss_weight * loss_c_vt
+            # loss_c_at = contrast_loss_weight * loss_c_at
+            # loss_c_vt = contrast_loss_weight * loss_c_vt
         else:
             loss_c_av, c_acc = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
-            loss_c_at, c_acc_at = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
-            loss_c_vt, c_acc_vt = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
+            # loss_c_at, c_acc_at = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
+            # loss_c_vt, c_acc_vt = torch.tensor(0.0, device=audio.device), torch.tensor(0.0, device=audio.device)
 
-        loss = loss_mae + loss_c_av + loss_c_at + loss_c_vt
+        loss = loss_mae + loss_c_av # loss_c_at + loss_c_vt
 
-        return loss, loss_mae, loss_mae_a, loss_mae_v, loss_c_av, mask_a, mask_v, c_acc, loss_c_vt, loss_c_at, c_acc_at, c_acc_vt
+        return loss, loss_mae, loss_mae_a, loss_mae_v, loss_c_av, mask_a, mask_v, c_acc#, loss_c_vt, loss_c_at, c_acc_at, c_acc_vt
 
     # used only for inpainting, ignore if inpainting is not of interest
     def forward_inpaint(self, audio, imgs, mask_ratio_a=0.75, mask_ratio_v=0.75, mask_mode='unstructured'):
