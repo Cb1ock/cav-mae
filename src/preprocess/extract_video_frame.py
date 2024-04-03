@@ -36,11 +36,10 @@ def extract_frame(input_video_path, target_fold, extract_frame_num=10):
         cv2_im = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
         pil_im = Image.fromarray(cv2_im)
         image_tensor = preprocess(pil_im)
-        # save in 'target_path/video_id/frame_{i}.jpg'
-        if os.path.exists(target_fold + f'/{video_id}') == False:
-            os.makedirs(target_fold + f'/{video_id}')
-        save_image(image_tensor, target_fold +f'/{video_id}' +f'/frame_{i}' + '.jpg')
-
+        # save in 'target_path/frame_{i}/video_id.jpg'
+        if os.path.exists(target_fold + f'/frame_{i}') == False:
+            os.makedirs(target_fold + f'/frame_{i}')
+        save_image(image_tensor, target_fold +f'/frame_{i}' +f'/{video_id}' + '.jpg')
 
 def process_video(video_file, target_fold):
     print(f'Processing video {video_file}...')
@@ -52,7 +51,7 @@ if __name__ == "__main__":
     from argparse import ArgumentParser
     parser = ArgumentParser(description="Python script to extract frames from a video, save as jpgs.")
     parser.add_argument("-input_file_list", type=str, default='/home/hao/Project/cav-mae/src/preprocess/celebvtext_video_list.csv', help="Should be a csv file of a single columns, each row is the input video path.")
-    parser.add_argument("-target_fold", type=str, default='/data/public_datasets/CelebV-Text/video/frames_10frame_for_1video', help="The place to store the video frames.")
+    parser.add_argument("-target_fold", type=str, default='/data/public_datasets/CelebV-Text/video/frames', help="The place to store the video frames.")
     args = parser.parse_args()
 
     # note the first row (header) is skipped
@@ -65,7 +64,7 @@ if __name__ == "__main__":
 
     num_cores = os.cpu_count()
     # create a multiprocessing Pool
-    pool = Pool(processes=num_cores//4)
+    pool = Pool(processes=num_cores//2)
     video_paths = [(file_path + input_file, args.target_fold) for input_file in input_filelist]
     
     pool.starmap(process_video, video_paths)
