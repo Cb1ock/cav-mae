@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     num_cores = os.cpu_count()
     # create a multiprocessing Pool
-    pool = Pool(processes=num_cores//2)
+    pool = Pool(processes=num_cores)
     video_paths = [(file_path + input_file, args.target_fold) for input_file in input_filelist]
     
     pool.starmap(process_video, video_paths)

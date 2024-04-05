@@ -1,5 +1,14 @@
 #!/bin/bash
-# run cav-mae pretraining, fits larger GPUs (4*24GB GPUs)
+##SBATCH -p a5
+##SBATCH -x sls-sm-1,sls-2080-[1,3],sls-1080-[1,2,3],sls-sm-[5,6,7,12]
+#SBATCH --gres=gpu:4
+#SBATCH -c 4
+#SBATCH -n 1
+#SBATCH --mem=120000
+#SBATCH --job-name="as-pretrain"
+#SBATCH --output=../log/%j_as_pretrain.txt
+
+# run cav-mae pretraining, use smaller lr and batch size, fits smaller GPUs (4*12GB GPUs)
 
 set -x
 . /data/sls/scratch/share-201907/slstoolchainrc
@@ -14,13 +23,12 @@ mae_loss_weight=1.0
 tr_pos=False
 norm_pix_loss=True
 
-# you can use any checkpoints with a decoder, but by default, we use vision-MAE checkpoint
 cur_dir=$(pwd)
 wget -nc https://www.dropbox.com/s/9nlz523a5q52w86/ori_mae_11.pth?dl=1 -O IN-initial.pth
 pretrain_path=${cur_dir}/IN-initial.pth
 
-bal=None # balanced sampling, should be false for pretraining
-lr=2e-4
+bal=None
+lr=5e-5
 epoch=25
 lrscheduler_start=10
 lrscheduler_decay=0.5
@@ -30,7 +38,7 @@ dataset_std=4.4849
 target_length=1024
 noise=True
 mixup=0.0
-batch_size=256
+batch_size=12
 lr_adapt=False
 
 dataset=audioset
@@ -41,7 +49,7 @@ label_csv=/home/hao/Project/cav-mae/src/preprocess/class_labels_indices_celebv.c
 exp_dir=./exp/testmae01-${dataset}-${model}-bal${bal}-lr${lr}-epoch${epoch}-bs${batch_size}-norm${norm_pix_loss}-c${contrast_loss_weight}-p${mae_loss_weight}-tp${tr_pos}-mr-${mask_mode}-${masking_ratio}-a5
 mkdir -p $exp_dir
 
-CUDA_VISIBLE_DEVICES=4,5,6,7 torchrun --nproc_per_node 4 ../../src/run_cavmae_pretrain.py --model ${model} --dataset ${dataset} \
+CUDA_CACHE_DISABLE=1 CUDA_VISIBLE_DEVICES=4,5,6,7 python -W ignore ../../src/run_cavmae_pretrain.py --model ${model} --dataset ${dataset} \
 --data-train ${tr_data} --data-val ${te_data} --exp-dir $exp_dir \
 --label-csv ${label_csv} --n_class 527 \
 --lr $lr --n-epochs ${epoch} --batch-size $batch_size --save_model True \
