@@ -42,7 +42,7 @@ def extract_frame(input_video_path, target_fold, extract_frame_num=10):
         save_image(image_tensor, target_fold +f'/frame_{i}' +f'/{video_id}' + '.jpg')
 
 def process_video(video_file, target_fold):
-    #print(f'Processing video {video_file}...')
+    print(f'Processing video {video_file}...')
     
     
     extract_frame(video_file, target_fold)
@@ -60,14 +60,11 @@ if __name__ == "__main__":
     file_path = '/data/public_datasets/CelebV-Text/video/celebvtext_video/'
     
     num_file = input_filelist.shape[0]
-    #print(f'Total {num_file} videos are input')
+    print(f'Total {num_file} videos are input')
 
     num_cores = os.cpu_count()
     # create a multiprocessing Pool
-    pool = Pool(processes=num_cores // 2)
+    pool = Pool(processes=num_cores)
     video_paths = [(file_path + input_file, args.target_fold) for input_file in input_filelist]
-
-    # 打印使用的进程数量
-    print(f"使用了 {pool._processes} 个进程")
-
+    
     pool.starmap(process_video, video_paths)
