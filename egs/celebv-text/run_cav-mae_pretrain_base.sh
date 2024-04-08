@@ -1,4 +1,12 @@
 #!/bin/bash
+##SBATCH -p a5
+##SBATCH -x sls-sm-1,sls-2080-[1,3],sls-1080-[1,2,3],sls-sm-[5,6,7,12]
+#SBATCH --gres=gpu:4
+#SBATCH -c 4
+#SBATCH -n 1
+#SBATCH --mem=120000
+#SBATCH --job-name="as-pretrain"
+#SBATCH --output=../log/%j_as_pretrain.txt
 
 # run cav-mae pretraining, use smaller lr and batch size, fits smaller GPUs (4*12GB GPUs)
 
@@ -30,13 +38,13 @@ dataset_std=4.4849
 target_length=1024
 noise=True
 mixup=0.0
-batch_size=12
+batch_size=16
 lr_adapt=False
 
 dataset=audioset
-tr_data=/home/chenghao/Project/cav-mae/src/preprocess/celebv-text.json
-te_data=/home/chenghao/Project/cav-mae/src/preprocess/celebv-text.json
-label_csv=/home/chenghao/Project/cav-mae/src/preprocess/class_labels_indices_celebv.csv
+tr_data=/home/chenghao/Project/cav-mae/egs/celebv-text/train_data.json
+te_data=/home/chenghao/Project/cav-mae/egs/celebv-text/test_data.json
+label_csv=/home/chenghao/Project/cav-mae/egs/celebv-text/class_labels_indices_celebv.csv
 
 exp_dir=./exp/testmae01-${dataset}-${model}-bal${bal}-lr${lr}-epoch${epoch}-bs${batch_size}-norm${norm_pix_loss}-c${contrast_loss_weight}-p${mae_loss_weight}-tp${tr_pos}-mr-${mask_mode}-${masking_ratio}-a5
 mkdir -p $exp_dir
@@ -52,4 +60,4 @@ CUDA_CACHE_DISABLE=1 python -W ignore ../../src/run_cavmae_pretrain.py --model $
 --norm_pix_loss ${norm_pix_loss} \
 --pretrain_path ${pretrain_path} \
 --mae_loss_weight ${mae_loss_weight} --contrast_loss_weight ${contrast_loss_weight} \
---tr_pos ${tr_pos} --masking_ratio ${masking_ratio} --mask_mode ${mask_mode} > log.txt 2>&1
+--tr_pos ${tr_pos} --masking_ratio ${masking_ratio} --mask_mode ${mask_mode} > $exp_dir/log.txt 2>&1

@@ -13,6 +13,8 @@ import torchvision.transforms as T
 from torchvision.utils import save_image
 
 from multiprocessing import Pool
+from tqdm import tqdm
+from tqdm.contrib.concurrent import process_map
 
 preprocess = T.Compose([
     T.Resize(224),
@@ -39,32 +41,38 @@ def extract_frame(input_video_path, target_fold, extract_frame_num=10):
         # save in 'target_path/frame_{i}/video_id.jpg'
         if os.path.exists(target_fold + f'/frame_{i}') == False:
             os.makedirs(target_fold + f'/frame_{i}')
-        save_image(image_tensor, target_fold +f'/frame_{i}' +f'/{video_id}' + '.jpg')
+        target_file = target_fold +f'/frame_{i}' +f'/{video_id}' + '.jpg'
+        if os.path.exists(target_file):
+            os.remove(target_file)
+        save_image(image_tensor, target_file)
 
 def process_video(video_file, target_fold):
-    print(f'Processing video {video_file}...')
-    
-    
-    extract_frame(video_file, target_fold)
+    #print(f'Processing video {video_file}...')
+    try:
+        extract_frame(video_file, target_fold)
+    except Exception as e:
+        print(f"Error processing video file {video_file}: {e}")
+        raise
     
 if __name__ == "__main__":
     from argparse import ArgumentParser
     parser = ArgumentParser(description="Python script to extract frames from a video, save as jpgs.")
-    parser.add_argument("-input_file_list", type=str, default='/home/chenghao/Project/cav-mae/src/preprocess/celebvtext_video_list.csv', help="Should be a csv file of a single columns, each row is the input video path.")
-    parser.add_argument("-target_fold", type=str, default='/data/public_datasets/CelebV-Text/video/frames', help="The place to store the video frames.")
+    parser.add_argument("-input_file_list", type=str, default='egs/MAFW/mafw_video_list.csv', help="Should be a csv file of a single columns, each row is the input video path.")
+    parser.add_argument("-target_fold", type=str, default='/data/chenghao/MAFW/data/frames', help="The place to store the video frames.")
     args = parser.parse_args()
 
     # note the first row (header) is skipped
     input_filelist = np.loadtxt(args.input_file_list, dtype=str, delimiter=',')
 
-    file_path = '/data/public_datasets/CelebV-Text/video/celebvtext_video/'
+    #file_path = '/data/public_datasets/CelebV-Text/video/celebvtext_video/'
+    file_path = '/data/chenghao/MAFW/data/clips/'
     
     num_file = input_filelist.shape[0]
     print(f'Total {num_file} videos are input')
 
     num_cores = os.cpu_count()
     # create a multiprocessing Pool
-    pool = Pool(processes=num_cores)
+    pool = Pool(processes=num_cores//2)
     video_paths = [(file_path + input_file, args.target_fold) for input_file in input_filelist]
     
     pool.starmap(process_video, video_paths)

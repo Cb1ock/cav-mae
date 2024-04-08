@@ -27,7 +27,23 @@ for audio_file in audio_files:
         'labels': 'virtual label'
     })
 
-# Save data as JSON
+import random
 
-with open('data.json', 'w') as f:
-    json.dump({'data': data}, f, indent=1)
+# Shuffle data
+random.shuffle(data)
+
+# Calculate the size of the training set
+train_size = int(len(data) * 0.9)
+print('we have', train_size, 'training samples')
+
+# Split the data
+train_data = data[:train_size]
+test_data = data[train_size:]
+
+# Save training data as JSON
+with open('train_data.json', 'w') as f:
+    json.dump({'data': train_data}, f, indent=1)
+
+# Save testing data as JSON
+with open('test_data.json', 'w') as f:
+    json.dump({'data': test_data}, f, indent=1)
