@@ -1,0 +1,5500 @@
+{
+ "data": [
+  {
+   "video_id": "04038",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04038.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "03647",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03647.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09822",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09822.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "03514",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03514.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "07552",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07552.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "02494",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02494.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02916",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02916.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04469",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04469.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07832",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07832.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "00521",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00521.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10001",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10001.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "20098",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20098.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "06904",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06904.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "06912",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06912.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "15607",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15607.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02062",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02062.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03124",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03124.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04437",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04437.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04243",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04243.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10962",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10962.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15022",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15022.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "06924",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06924.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05361",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05361.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07276",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07276.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05879",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05879.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10727",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10727.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03987",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03987.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "01264",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01264.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01973",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01973.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09081",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09081.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "04963",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04963.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10361",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10361.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "02579",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02579.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09319",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09319.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10845",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10845.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "02163",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02163.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00770",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00770.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10829",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10829.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08145",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08145.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02359",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02359.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "06830",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06830.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02742",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02742.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10862",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10862.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "00135",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00135.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "04409",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04409.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05138",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05138.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07360",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07360.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10759",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10759.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07273",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07273.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04608",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04608.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00027",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00027.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15537",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15537.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07770",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07770.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05069",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05069.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "01172",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01172.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "01219",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01219.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "05367",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05367.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10466",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10466.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01040",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01040.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09519",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09519.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "07607",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07607.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09788",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09788.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "15028",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15028.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "11006",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11006.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02498",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02498.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09160",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09160.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "10094",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10094.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08511",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08511.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08992",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08992.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "10173",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10173.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00279",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00279.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00267",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00267.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03373",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03373.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15115",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15115.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "11160",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11160.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08789",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08789.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "10532",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10532.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "01542",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01542.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "11080",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11080.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10102",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10102.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "04857",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04857.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "01101",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01101.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00374",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00374.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "07291",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07291.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "15546",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15546.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04593",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04593.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05311",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05311.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "15264",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15264.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09007",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09007.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "07942",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07942.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "04446",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04446.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04168",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04168.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "01920",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01920.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15392",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15392.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00916",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00916.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "02337",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02337.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "02683",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02683.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "06978",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06978.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05079",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05079.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09514",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09514.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08472",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08472.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "03126",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03126.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03091",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03091.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05695",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05695.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15008",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15008.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09000",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09000.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "07706",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07706.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "00384",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00384.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03162",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03162.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05154",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05154.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02705",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02705.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00595",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00595.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04330",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04330.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "03700",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03700.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "20088",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20088.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "02502",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02502.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "01795",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01795.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "01295",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01295.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "15402",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15402.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "00673",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00673.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05715",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05715.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "05833",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05833.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08213",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08213.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00675",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00675.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "10560",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10560.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02160",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02160.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "00180",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00180.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08532",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08532.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10579",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10579.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02760",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02760.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00355",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00355.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15405",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15405.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "02929",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02929.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00429",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00429.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "05618",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05618.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05444",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05444.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02894",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02894.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02866",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02866.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "01708",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01708.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10851",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10851.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "06908",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06908.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "05276",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05276.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03343",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03343.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "00564",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00564.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10419",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10419.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09798",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09798.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09705",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09705.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08577",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08577.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01864",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01864.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00747",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00747.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "08069",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08069.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "08548",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08548.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04848",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04848.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04165",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04165.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07633",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07633.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "08395",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08395.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01858",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01858.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08826",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08826.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05914",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05914.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10395",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10395.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00441",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00441.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00123",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00123.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09136",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09136.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10275",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10275.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15098",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15098.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10882",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10882.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "07642",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07642.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "03541",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03541.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07177",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07177.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03177",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03177.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04789",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04789.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08423",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08423.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08388",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08388.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08915",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08915.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "05340",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05340.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07402",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07402.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09686",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09686.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08248",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08248.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "01625",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01625.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10910",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10910.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "05001",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05001.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05117",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05117.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "20044",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20044.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15523",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15523.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07978",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07978.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07616",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07616.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "03215",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03215.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10524",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10524.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08257",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08257.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03986",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03986.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07428",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07428.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "00581",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00581.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04964",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04964.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08692",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08692.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "15179",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15179.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "11004",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11004.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07103",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07103.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01801",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01801.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02604",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02604.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04851",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04851.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00325",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00325.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "09357",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09357.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "03313",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03313.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "11033",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11033.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10729",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10729.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "04937",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04937.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04931",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04931.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07714",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07714.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "03515",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03515.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08479",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08479.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "09285",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09285.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "11083",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11083.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02541",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02541.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09016",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09016.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "11049",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11049.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01668",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01668.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10899",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10899.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05377",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05377.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03513",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03513.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09581",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09581.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10279",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10279.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07701",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07701.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "07721",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07721.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05100",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05100.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07659",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07659.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "07316",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07316.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07508",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07508.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08504",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08504.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03048",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03048.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04027",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04027.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04141",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04141.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04396",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04396.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04222",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04222.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09930",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09930.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "03127",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03127.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "15509",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15509.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10413",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10413.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05127",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05127.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10982",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10982.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02942",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02942.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "02732",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02732.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "07669",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07669.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "08053",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08053.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09839",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09839.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "06958",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06958.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "07845",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07845.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10485",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10485.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07779",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07779.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08859",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08859.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "07050",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07050.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10247",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10247.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09121",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09121.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10666",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10666.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "03849",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03849.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05713",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05713.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10366",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10366.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08156",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08156.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08895",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08895.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "02979",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02979.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05660",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05660.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00646",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00646.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "15221",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15221.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08634",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08634.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04324",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04324.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07008",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07008.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "08017",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08017.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "02622",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02622.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08073",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08073.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09318",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09318.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04579",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04579.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02507",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02507.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "20058",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20058.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07255",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07255.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01924",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01924.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "05398",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05398.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10491",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10491.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10704",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10704.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09024",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09024.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03195",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03195.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15192",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15192.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "00515",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00515.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03847",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03847.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09888",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09888.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01107",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01107.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "05719",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05719.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08819",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08819.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "04062",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04062.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04345",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04345.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02009",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02009.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00080",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00080.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10262",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10262.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05007",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05007.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07812",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07812.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "11252",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11252.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "11122",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11122.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "09567",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09567.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "01445",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01445.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05928",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05928.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01532",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01532.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "15469",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15469.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "07647",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07647.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04175",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04175.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07161",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07161.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "15334",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15334.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "20060",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20060.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "01147",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01147.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04818",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04818.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07203",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07203.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08294",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08294.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08813",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08813.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "03472",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03472.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05249",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05249.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09532",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09532.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05702",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05702.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "05501",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05501.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09573",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09573.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "11255",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11255.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "15148",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15148.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15489",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15489.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10832",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10832.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01692",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01692.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08516",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08516.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "02879",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02879.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07443",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07443.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04917",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04917.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "03616",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03616.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "15552",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15552.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08007",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08007.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07334",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07334.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04375",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04375.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09384",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09384.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01478",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01478.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "01243",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01243.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "11027",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11027.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05947",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05947.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10917",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10917.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07805",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07805.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02766",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02766.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10904",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10904.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "11028",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11028.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00761",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00761.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01217",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01217.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03043",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03043.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "08011",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08011.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09257",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09257.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09507",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09507.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "11236",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11236.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "01416",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01416.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "07981",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07981.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08962",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08962.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "10437",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10437.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09783",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09783.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10339",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10339.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07366",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07366.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02371",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02371.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00876",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00876.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07814",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07814.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04022",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04022.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09578",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09578.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01759",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01759.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03938",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03938.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01879",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01879.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "20073",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20073.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07150",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07150.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00465",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00465.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15340",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15340.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04452",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04452.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04445",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04445.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04018",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04018.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15483",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15483.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "07315",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07315.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07596",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07596.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15170",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15170.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "15201",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15201.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01945",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01945.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "01728",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01728.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08397",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08397.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "15146",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15146.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "08549",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08549.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "03621",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03621.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07526",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07526.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08911",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08911.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08779",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08779.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "02786",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02786.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08489",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08489.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09970",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09970.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09403",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09403.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01688",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01688.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09096",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09096.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09551",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09551.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09070",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09070.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "05635",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05635.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10825",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10825.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "05674",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05674.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "08266",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08266.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04289",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04289.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "08120",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08120.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "00954",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00954.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "03590",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03590.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07017",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07017.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03006",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03006.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03406",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03406.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00560",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00560.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07247",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07247.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "20028",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20028.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04013",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04013.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "02767",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02767.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03521",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03521.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "05123",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05123.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "06846",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06846.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "04601",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04601.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "03438",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03438.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01412",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01412.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04128",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04128.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15081",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15081.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02132",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02132.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01142",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01142.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "00835",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00835.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05450",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05450.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02938",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02938.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10590",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10590.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10988",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10988.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04411",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04411.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01673",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01673.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09155",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09155.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "01863",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01863.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04186",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04186.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00715",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00715.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07217",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07217.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07268",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07268.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08810",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08810.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03460",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03460.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07601",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07601.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10903",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10903.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03862",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03862.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00289",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00289.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "15073",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15073.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "04294",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04294.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02956",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02956.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15093",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15093.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00878",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00878.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10813",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10813.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00036",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00036.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "11176",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11176.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "00266",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00266.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04633",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04633.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09812",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09812.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09489",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09489.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "01951",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01951.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07357",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07357.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01486",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01486.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08638",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08638.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01636",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01636.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02624",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02624.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08084",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08084.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15594",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15594.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "02795",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02795.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "15477",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15477.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "00215",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00215.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "07910",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07910.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10665",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10665.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "01552",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01552.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10760",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10760.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03667",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03667.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09785",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09785.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05485",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05485.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "04500",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04500.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10403",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10403.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01736",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01736.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05449",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05449.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "09717",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09717.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10650",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10650.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02704",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02704.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08123",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08123.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "05065",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05065.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02323",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02323.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "11058",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11058.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "10178",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10178.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01466",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01466.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09322",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09322.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15121",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15121.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "08565",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08565.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01274",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01274.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07125",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07125.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00137",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00137.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08652",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08652.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10926",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10926.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05921",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05921.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00860",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00860.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "15423",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15423.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "02095",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02095.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09025",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09025.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "04076",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04076.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "10767",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10767.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01367",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01367.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "06947",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06947.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08385",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08385.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05705",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05705.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "15524",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15524.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07095",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07095.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02285",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02285.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "01033",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01033.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "06946",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06946.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03380",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03380.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07547",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07547.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "07880",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07880.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05663",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05663.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10433",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10433.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01201",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01201.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04845",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04845.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03446",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03446.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09243",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09243.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "11104",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11104.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "05287",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05287.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "00380",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00380.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10439",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10439.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "09825",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09825.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10925",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10925.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10091",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10091.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "15562",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15562.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05385",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05385.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08150",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08150.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08342",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08342.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07782",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07782.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "07057",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07057.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07007",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07007.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10270",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10270.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15207",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15207.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08161",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08161.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "04597",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04597.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00808",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00808.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00974",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00974.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00793",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00793.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "09682",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09682.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "04640",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04640.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "07764",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07764.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09246",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09246.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "05301",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05301.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07186",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07186.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "03589",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03589.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "02479",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02479.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "05032",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05032.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01757",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01757.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02080",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02080.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03820",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03820.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03356",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03356.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10304",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10304.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10409",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10409.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09956",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09956.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "03046",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03046.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09630",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09630.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "05939",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05939.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07453",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07453.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07742",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07742.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "01042",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01042.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "00864",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00864.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02183",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02183.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07501",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07501.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07306",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07306.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "10897",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10897.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "20055",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20055.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "08842",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08842.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02974",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02974.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01256",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01256.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "08827",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08827.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10558",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10558.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10360",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10360.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10422",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10422.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "06971",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06971.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09775",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09775.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10271",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10271.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15343",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15343.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04347",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04347.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08945",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08945.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01855",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01855.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01074",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01074.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "00379",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00379.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01267",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01267.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07725",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07725.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "02287",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02287.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08178",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08178.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08927",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08927.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "10711",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10711.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "15268",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15268.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "15240",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15240.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05509",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05509.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "08332",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08332.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09760",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09760.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "01942",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01942.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "05772",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05772.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "04898",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04898.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02676",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02676.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "01566",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01566.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09106",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09106.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "20045",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20045.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15380",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15380.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "15517",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15517.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "07619",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07619.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08374",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08374.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "03799",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03799.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "08623",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08623.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "03997",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03997.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08310",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08310.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "08742",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08742.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10594",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10594.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10607",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10607.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09261",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09261.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09670",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09670.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "00308",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00308.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07620",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07620.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04394",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04394.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15283",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15283.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "06927",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06927.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09641",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09641.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03386",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03386.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "11099",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11099.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "00825",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00825.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02577",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02577.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00865",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00865.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "05710",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05710.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "00512",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00512.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "05637",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05637.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "10388",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10388.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00705",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00705.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "09936",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09936.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "06936",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06936.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08412",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08412.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "10561",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10561.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "01584",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01584.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04380",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04380.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09590",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09590.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "11081",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11081.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "09885",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09885.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07670",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07670.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "10240",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10240.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10164",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10164.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09005",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09005.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "05342",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05342.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "05132",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05132.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03595",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03595.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00725",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00725.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08408",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08408.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04639",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04639.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "03509",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03509.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07122",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07122.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10225",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10225.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15430",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15430.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "02529",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02529.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "00160",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00160.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15215",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15215.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09352",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09352.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10754",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10754.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "01491",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01491.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04737",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04737.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00965",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00965.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "07424",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07424.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "00964",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00964.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10725",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10725.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "07599",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07599.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "03192",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03192.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10408",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10408.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08127",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08127.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15479",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15479.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08669",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08669.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05700",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05700.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15357",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15357.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02027",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02027.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07826",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07826.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "03971",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03971.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00154",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00154.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "20006",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20006.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "11077",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11077.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01784",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01784.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09454",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09454.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "05316",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05316.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "01199",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01199.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00570",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00570.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15135",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15135.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04395",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04395.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02366",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02366.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "11188",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11188.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01044",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01044.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "10577",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10577.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08967",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08967.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07958",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07958.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "00037",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00037.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02338",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02338.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01737",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01737.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09481",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09481.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04183",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04183.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05534",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05534.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09255",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09255.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10238",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10238.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09219",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09219.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07875",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07875.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01914",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01914.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "05866",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05866.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08666",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08666.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "06823",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06823.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10605",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10605.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05729",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05729.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03993",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03993.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "05571",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05571.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "15120",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15120.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "10683",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10683.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "02625",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02625.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "06911",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06911.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04487",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04487.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04950",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04950.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01702",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01702.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07116",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07116.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "03564",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03564.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "03398",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03398.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07263",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07263.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "11239",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11239.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15459",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15459.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "03366",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03366.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09684",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09684.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10213",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10213.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04596",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04596.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01376",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01376.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "06989",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06989.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05664",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05664.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "11056",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/11056.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09383",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09383.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09339",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09339.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "06851",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06851.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "00963",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00963.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01346",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01346.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "08291",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08291.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "09692",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09692.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07486",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07486.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "00610",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00610.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "03400",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03400.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15136",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15136.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04671",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04671.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10939",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10939.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00397",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00397.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "06972",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06972.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04391",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04391.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "08550",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08550.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "07178",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07178.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09143",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09143.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "05313",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05313.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "01816",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01816.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10672",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10672.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08703",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08703.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "07715",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07715.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "15591",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15591.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "05653",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05653.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04012",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04012.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "01965",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01965.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04444",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04444.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01670",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01670.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10323",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10323.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "01455",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01455.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15198",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15198.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05077",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05077.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02665",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02665.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00592",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00592.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "09656",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09656.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "07363",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07363.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "08650",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08650.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "01308",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01308.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "05763",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05763.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07623",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07623.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08714",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08714.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "02634",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02634.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "04132",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04132.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "03821",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03821.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "07206",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07206.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01824",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01824.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "05242",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05242.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04102",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04102.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10886",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10886.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04159",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04159.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09748",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09748.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04163",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04163.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "10326",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10326.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08283",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08283.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10981",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10981.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00813",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00813.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05022",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05022.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "03988",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03988.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "00836",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00836.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "06962",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06962.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "00671",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00671.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09524",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09524.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09361",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09361.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "03996",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03996.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00657",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00657.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09215",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09215.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "09700",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09700.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "15505",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15505.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "00572",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00572.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "09170",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09170.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08490",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08490.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 4
+  },
+  {
+   "video_id": "08335",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08335.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "00690",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00690.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03372",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03372.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04441",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04441.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10909",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10909.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07730",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07730.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "05465",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05465.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02963",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02963.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05263",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05263.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09283",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09283.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09393",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09393.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "00897",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00897.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03021",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03021.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04625",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04625.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "07409",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07409.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "01939",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01939.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05878",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05878.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02597",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02597.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "00170",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00170.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04301",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04301.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "05331",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05331.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "15009",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15009.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "20051",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/20051.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "09486",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09486.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "04866",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04866.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "01016",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01016.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10687",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10687.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "09315",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09315.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "05717",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05717.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08535",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08535.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08885",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08885.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "02822",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02822.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02114",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02114.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01233",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01233.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "10632",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10632.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "02729",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02729.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "03244",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03244.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04561",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04561.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05058",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05058.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "05607",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05607.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "04923",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04923.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09737",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09737.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00041",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00041.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08781",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08781.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "15317",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15317.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10776",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10776.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "08392",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08392.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "05004",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05004.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "03054",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03054.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "10494",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10494.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "08427",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08427.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "02796",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02796.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08443",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08443.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "09843",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09843.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04442",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04442.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00816",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00816.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "09598",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09598.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08253",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08253.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "02361",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02361.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "10432",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10432.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08350",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08350.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "06877",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06877.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08939",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08939.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08761",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08761.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "01929",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01929.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "08682",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08682.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "03209",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03209.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "01718",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01718.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "15577",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15577.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "04400",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04400.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15417",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15417.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08619",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08619.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "04619",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04619.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04085",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04085.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "10342",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10342.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "15292",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15292.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 10
+  },
+  {
+   "video_id": "09920",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09920.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "07383",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07383.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "05085",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05085.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05307",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05307.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "08924",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08924.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "01270",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01270.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07091",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07091.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "02468",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02468.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "06880",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/06880.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "08204",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08204.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "00366",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00366.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "08343",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08343.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08743",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08743.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "08139",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08139.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "03609",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03609.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "07108",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07108.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04581",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04581.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02654",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02654.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "04146",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04146.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "02505",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02505.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "04344",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04344.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "04043",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04043.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "05224",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/05224.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "10318",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10318.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 2
+  },
+  {
+   "video_id": "10912",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10912.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "04365",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04365.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "04458",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04458.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04531",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04531.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "02173",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02173.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "04925",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04925.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "15172",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/15172.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "10784",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/10784.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "03734",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/03734.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "04722",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/04722.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 7
+  },
+  {
+   "video_id": "09755",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/09755.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  },
+  {
+   "video_id": "00709",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00709.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 9
+  },
+  {
+   "video_id": "01696",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/01696.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 5
+  },
+  {
+   "video_id": "08851",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08851.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 8
+  },
+  {
+   "video_id": "07185",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/07185.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 3
+  },
+  {
+   "video_id": "08337",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08337.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 0
+  },
+  {
+   "video_id": "02950",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/02950.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "00093",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/00093.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 1
+  },
+  {
+   "video_id": "08524",
+   "wav": "/data/chenghao/MAFW/data/sample_audio/08524.wav",
+   "video_path": "/data/chenghao/MAFW/data/frames",
+   "labels": 6
+  }
+ ]
+}

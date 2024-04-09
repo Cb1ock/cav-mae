@@ -50,7 +50,7 @@ parser.add_argument("--n-epochs", type=int, default=10, help="number of maximum 
 # not used in the formal experiments, only in preliminary experiments
 parser.add_argument("--lr_patience", type=int, default=1, help="how many epoch to wait to reduce lr if mAP doesn't improve")
 parser.add_argument("--lr_adapt", help='if use adaptive learning rate', type=ast.literal_eval)
-parser.add_argument("--metrics", type=str, default="mAP", help="the main evaluation metrics in finetuning", choices=["mAP", "acc"])
+parser.add_argument("--metrics", type=str, default="mAP", help="the main evaluation metrics in finetuning", choices=["mAP", "acc", "emo"])
 parser.add_argument("--loss", type=str, default="BCE", help="the loss function for finetuning, depend on the task", choices=["BCE", "CE"])
 parser.add_argument('--warmup', help='if use warmup learning rate scheduler', type=ast.literal_eval, default='True')
 parser.add_argument("--lrscheduler_start", default=2, type=int, help="when to start decay in finetuning")
