@@ -19,12 +19,22 @@ from torch.cuda.amp import autocast,GradScaler
 
 from sklearn.metrics import recall_score
 
-# Define functions to calculate UAR and WAR
+import numpy as np
+
 def calculate_uar(y_true, y_pred):
+    if y_true.ndim > 1:
+        y_true = np.argmax(y_true, axis=1)
+    if y_pred.ndim > 1:
+        y_pred = np.argmax(y_pred, axis=1)
     return recall_score(y_true, y_pred, average='macro')
 
 def calculate_war(y_true, y_pred):
+    if y_true.ndim > 1:
+        y_true = np.argmax(y_true, axis=1)
+    if y_pred.ndim > 1:
+        y_pred = np.argmax(y_pred, axis=1)
     return recall_score(y_true, y_pred, average='weighted')
+
 
 def train(audio_model, train_loader, test_loader, args):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -261,8 +271,7 @@ def validate(audio_model, val_loader, args, output_pred=False):
         war = calculate_war(target, audio_output)
 
         stats = calculate_stats(audio_output, target)
-        stats['uar'] = uar
-        stats['war'] = war
+        stats.append({'uar': uar, 'war': war})
 
     if output_pred == False:
         return stats, loss
