@@ -17,6 +17,15 @@ import numpy as np
 import pickle
 from torch.cuda.amp import autocast,GradScaler
 
+from sklearn.metrics import recall_score
+
+# Define functions to calculate UAR and WAR
+def calculate_uar(y_true, y_pred):
+    return recall_score(y_true, y_pred, average='macro')
+
+def calculate_war(y_true, y_pred):
+    return recall_score(y_true, y_pred, average='weighted')
+
 def train(audio_model, train_loader, test_loader, args):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print('running on ' + str(device))
@@ -148,22 +157,28 @@ def train(audio_model, train_loader, test_loader, args):
 
         stats, valid_loss = validate(audio_model, test_loader, args)
 
+        uar = np.mean([stat['uar'] for stat in stats])
+        war = np.mean([stat['war'] for stat in stats])
         mAP = np.mean([stat['AP'] for stat in stats])
         mAUC = np.mean([stat['auc'] for stat in stats])
         acc = stats[0]['acc'] # this is just a trick, acc of each class entry is the same, which is the accuracy of all classes, not class-wise accuracy
 
-        if main_metrics == 'mAP':
-            print("mAP: {:.6f}".format(mAP))
-        else:
-            print("acc: {:.6f}".format(acc))
+        print("UAR: {:.6f}".format(uar))
+        print("WAR: {:.6f}".format(war))
+        print("mAP: {:.6f}".format(mAP))
         print("AUC: {:.6f}".format(mAUC))
         print("d_prime: {:.6f}".format(d_prime(mAUC)))
         print("train_loss: {:.6f}".format(loss_meter.avg))
         print("valid_loss: {:.6f}".format(valid_loss))
 
-        result[epoch-1, :] = [acc, mAP, mAUC, optimizer.param_groups[0]['lr']]
+        result[epoch-1, :] = [acc, mAP, mAUC, uar, war, optimizer.param_groups[0]['lr']]
         np.savetxt(exp_dir + '/result.csv', result, delimiter=',')
         print('validation finished')
+
+        if war > best_war:
+            best_war = war
+            if main_metrics == 'emo':
+                best_epoch = epoch
 
         if mAP > best_mAP:
             best_mAP = mAP
@@ -241,7 +256,13 @@ def validate(audio_model, val_loader, args, output_pred=False):
         target = torch.cat(A_targets)
         loss = np.mean(A_loss)
 
+        # Calculate UAR and WAR
+        uar = calculate_uar(target, audio_output)
+        war = calculate_war(target, audio_output)
+
         stats = calculate_stats(audio_output, target)
+        stats['uar'] = uar
+        stats['war'] = war
 
     if output_pred == False:
         return stats, loss
