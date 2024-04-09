@@ -32,3 +32,4 @@ log.txt
 **.pickle
 *.json
 *.csv
+run_cavmae_ft.sh
