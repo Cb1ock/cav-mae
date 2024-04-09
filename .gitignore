@@ -30,3 +30,5 @@ src/preprocess/sample_frames/*
 log.txt
 **.pkl
 **.pickle
+*.json
+*.csv
