@@ -23,7 +23,7 @@ import warnings
 import json
 from sklearn import metrics
 from traintest_ft import train, validate
-
+from traintest_ft import calculate_uar, calculate_war
 # finetune cav-mae model
 
 print("I am process %s, running on %s: starting (%s)" % (os.getpid(), os.uname()[1], time.asctime()))
@@ -84,21 +84,6 @@ args = parser.parse_args()
 from sklearn.metrics import recall_score
 
 import numpy as np
-
-def calculate_uar(y_true, y_pred):
-    if y_true.ndim > 1:
-        y_true = np.argmax(y_true, axis=1)
-    if y_pred.ndim > 1:
-        y_pred = np.argmax(y_pred, axis=1)
-    return recall_score(y_true, y_pred, average='macro')
-
-
-def calculate_war(y_true, y_pred):
-    if y_true.ndim > 1:
-        y_true = np.argmax(y_true, axis=1)
-    if y_pred.ndim > 1:
-        y_pred = np.argmax(y_pred, axis=1)
-    return recall_score(y_true, y_pred, average='weighted')
 
 
 # all exp in this work is based on 224 * 224 image

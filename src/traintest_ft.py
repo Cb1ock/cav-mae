@@ -21,19 +21,30 @@ from sklearn.metrics import recall_score
 
 import numpy as np
 
+from sklearn.metrics import confusion_matrix
+
 def calculate_uar(y_true, y_pred):
     if y_true.ndim > 1:
         y_true = np.argmax(y_true, axis=1)
     if y_pred.ndim > 1:
         y_pred = np.argmax(y_pred, axis=1)
-    return recall_score(y_true, y_pred, average='macro')
+
+    conf_mat = confusion_matrix(y_pred=y_pred, y_true=y_true)
+    class_acc = conf_mat.diagonal() / conf_mat.sum(axis=1)
+    uar = np.mean(class_acc)
+
+    return uar
 
 def calculate_war(y_true, y_pred):
     if y_true.ndim > 1:
         y_true = np.argmax(y_true, axis=1)
     if y_pred.ndim > 1:
         y_pred = np.argmax(y_pred, axis=1)
-    return recall_score(y_true, y_pred, average='weighted')
+
+    conf_mat = confusion_matrix(y_pred=y_pred, y_true=y_true)
+    war = conf_mat.trace() / conf_mat.sum()
+
+    return war
 
 
 def train(audio_model, train_loader, test_loader, args):
@@ -43,7 +54,7 @@ def train(audio_model, train_loader, test_loader, args):
 
     batch_time, per_sample_time, data_time, per_sample_data_time, loss_meter, per_sample_dnn_time = AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter(), AverageMeter()
     progress = []
-    best_epoch, best_mAP, best_acc = 0, -np.inf, -np.inf
+    best_epoch, best_mAP, best_acc, best_war = 0, -np.inf, -np.inf, -np.inf
     global_step, epoch = 0, 0
     start_time = time.time()
     exp_dir = args.exp_dir
@@ -110,7 +121,7 @@ def train(audio_model, train_loader, test_loader, args):
 
     print("current #steps=%s, #epochs=%s" % (global_step, epoch))
     print("start training...")
-    result = np.zeros([args.n_epochs, 4])
+    result = np.zeros([args.n_epochs, 6])
     audio_model.train()
     while epoch < args.n_epochs + 1:
         begin_time = time.time()
@@ -167,10 +178,10 @@ def train(audio_model, train_loader, test_loader, args):
 
         stats, valid_loss = validate(audio_model, test_loader, args)
 
-        uar = np.mean([stat['uar'] for stat in stats])
-        war = np.mean([stat['war'] for stat in stats])
-        mAP = np.mean([stat['AP'] for stat in stats])
-        mAUC = np.mean([stat['auc'] for stat in stats])
+        uar = np.mean([stat.get('uar', 0) for stat in stats])
+        war = np.mean([stat.get('war', 0) for stat in stats])
+        mAP = np.mean([stat['AP'] for stat in stats if 'AP' in stat])
+        mAUC = np.mean([stat['auc'] for stat in stats if 'auc' in stat])
         acc = stats[0]['acc'] # this is just a trick, acc of each class entry is the same, which is the accuracy of all classes, not class-wise accuracy
 
         print("UAR: {:.6f}".format(uar))
@@ -271,7 +282,7 @@ def validate(audio_model, val_loader, args, output_pred=False):
         war = calculate_war(target, audio_output)
 
         stats = calculate_stats(audio_output, target)
-        stats.append({'uar': uar, 'war': war})
+        stats.append({'uar': f'{uar:.2%}', 'war': f'{war:.2%}'})
 
     if output_pred == False:
         return stats, loss
