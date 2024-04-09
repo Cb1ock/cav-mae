@@ -80,6 +80,16 @@ parser.add_argument('--skip_frame_agg', help='if do frame agg', type=ast.literal
 
 args = parser.parse_args()
 
+
+from sklearn.metrics import recall_score
+
+# Define functions to calculate UAR and WAR
+def calculate_uar(y_true, y_pred):
+    return recall_score(y_true, y_pred, average='macro')
+
+def calculate_war(y_true, y_pred):
+    return recall_score(y_true, y_pred, average='weighted')
+
 # all exp in this work is based on 224 * 224 image
 im_res = 224
 audio_conf = {'num_mel_bins': 128, 'target_length': args.target_length, 'freqm': args.freqm, 'timem': args.timem, 'mixup': args.mixup,
@@ -227,4 +237,13 @@ else:
         mAP = np.mean(AP)
         print('multi-frame mAP is {:.4f}'.format(mAP))
         res.append(mAP)
+    elif args.metrics == 'emo':
+        uar = calculate_uar(np.argmax(target, 1), np.argmax(multiframe_pred, 1))
+        print('multi-frame UAR is {:f}'.format(uar))
+        res.append(uar)
+        war = calculate_war(np.argmax(target, 1), np.argmax(multiframe_pred, 1))
+        print('multi-frame WAR is {:f}'.format(war))
+        res.append(war)
+
+
     np.savetxt(args.exp_dir + '/mul_frame_res.csv', res, delimiter=',')

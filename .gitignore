@@ -32,3 +32,4 @@ egs/vggsound/run_cavmae_ft_audioonly_internal.sh
 src/preprocess/sample_frames/*
 log.txt
 **.pkl
+**.pickle
