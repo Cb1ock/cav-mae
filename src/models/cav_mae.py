@@ -14,7 +14,7 @@ import timm
 from timm.models.layers import to_2tuple, trunc_normal_, DropPath
 from timm.models.vision_transformer import Attention, Mlp, PatchEmbed, Block
 from .pos_embed import get_2d_sincos_pos_embed
-
+from src.models.modeling_finetune import vit_base_patch16_160
 class PatchEmbed(nn.Module):
     def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
         super().__init__()
@@ -95,6 +95,7 @@ class CAVMAE(nn.Module):
         self.blocks_a = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(modality_specific_depth)])
         # visual-branch
         self.blocks_v = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(modality_specific_depth)])
+        self.blocks_maedfer = vit_base_patch16_160()
         # unified branch
         self.blocks_u = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(12-modality_specific_depth)])
 
@@ -415,6 +416,15 @@ class CAVMAE(nn.Module):
 
         loss = loss_mae + loss_c
 
+        # Run input through self.blocks_v
+        output = self.blocks_v(imgs)
+
+        # Print the output shape
+        print("Output shape:", output.shape)
+
+        # Print the output
+        print("Output:", output)
+        
         return loss, loss_mae, loss_mae_a, loss_mae_v, loss_c, mask_a, mask_v, c_acc
 
     # used only for inpainting, ignore if inpainting is not of interest

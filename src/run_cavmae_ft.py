@@ -235,10 +235,10 @@ else:
         res.append(mAP)
     elif args.metrics == 'emo':
         uar = calculate_uar(np.argmax(target, 1), np.argmax(multiframe_pred, 1))
-        print('multi-frame UAR is {:f}'.format(uar))
+        print('multi-frame UAR is {:.2%}'.format(uar))
         res.append(uar)
         war = calculate_war(np.argmax(target, 1), np.argmax(multiframe_pred, 1))
-        print('multi-frame WAR is {:f}'.format(war))
+        print('multi-frame WAR is {:.2%}'.format(war))
         res.append(war)
 
 

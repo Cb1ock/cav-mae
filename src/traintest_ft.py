@@ -184,8 +184,8 @@ def train(audio_model, train_loader, test_loader, args):
         mAUC = np.mean([stat['auc'] for stat in stats if 'auc' in stat])
         acc = stats[0]['acc'] # this is just a trick, acc of each class entry is the same, which is the accuracy of all classes, not class-wise accuracy
 
-        print("UAR: {:.6f}".format(uar))
-        print("WAR: {:.6f}".format(war))
+        print("UAR: {:.2%}".format(uar))
+        print("WAR: {:.2%}".format(war))
         print("mAP: {:.6f}".format(mAP))
         print("AUC: {:.6f}".format(mAUC))
         print("d_prime: {:.6f}".format(d_prime(mAUC)))
@@ -282,7 +282,7 @@ def validate(audio_model, val_loader, args, output_pred=False):
         war = calculate_war(target, audio_output)
 
         stats = calculate_stats(audio_output, target)
-        stats.append({'uar': f'{uar:.2%}', 'war': f'{war:.2%}'})
+        stats.append({'uar': uar, 'war': war})
 
     if output_pred == False:
         return stats, loss
