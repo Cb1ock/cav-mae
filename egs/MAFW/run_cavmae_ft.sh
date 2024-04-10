@@ -13,8 +13,7 @@ ftmode=multimodal # or audioonly or videoonly
 cur_dir=$(pwd)
 #wget -nc https://www.dropbox.com/s/l5t5geufdy3qvnv/audio_model.21.pth?dl=1 -O cav-mae-scale++.pth
 #pretrain_path=${cur_dir}/cav-mae-scale++.pth
-pretrain_path=/home/chenghao/Project/cav-mae/egs/celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr5e-5-epoch25-bs16-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/audio_model.25.pth
-
+pretrain_path=../../pretrained_model/audio_model.pth
 freeze_base=False
 head_lr=50 # newly initialized ft layers uses 50 times larger than the base lr
 
@@ -39,9 +38,9 @@ batch_size=8
 label_smooth=0.1
 
 dataset=audioset
-tr_data=/home/chenghao/Project/cav-mae/egs/MAFW/train_data.json
-te_data=/home/chenghao/Project/cav-mae/egs/MAFW/test_data.json
-label_csv=/home/chenghao/Project/cav-mae/egs/MAFW/class_labels_indices_mafw.csv
+tr_data=train_data.json
+te_data=test_data.json
+label_csv=class_labels_indices_mafw.csv
 
 exp_dir=./exp/testmae01-full-${model}-${lr}-${lrscheduler_start}-${lrscheduler_decay}-${lrscheduler_step}-bs${batch_size}-lda${lr_adapt}-${ftmode}-fz${freeze_base}-h${head_lr}-r3
 mkdir -p $exp_dir
