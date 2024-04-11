@@ -1,9 +1,9 @@
 import json
 import os
 
-audio_dir = '/data/chenghao/MAFW/data/sample_audio'
-video_dir = '/data/chenghao/MAFW/data/frames'
-anno_dir = '/data/chenghao/MAFW/anno/single_anno.txt'  # replace with your actual label file path
+audio_dir = '/data/hao/MAFW/data/sample_audio'
+video_dir = '/data/hao/MAFW/data/frames'
+anno_dir = '/data/hao/MAFW/anno/single_anno.txt'  # replace with your actual label file path
 audio_files = os.listdir(audio_dir)
 video_dirs = os.listdir(video_dir)
 

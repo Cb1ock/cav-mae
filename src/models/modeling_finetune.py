@@ -511,6 +511,7 @@ class VisionTransformer(nn.Module):
         self.head = nn.Linear(self.embed_dim, num_classes) if num_classes > 0 else nn.Identity()
 
     def forward_features(self, x):
+        print(x.shape)
         x = self.patch_embed(x)
         B, _, _ = x.size()
 
@@ -568,6 +569,7 @@ class VisionTransformer(nn.Module):
             return x[:, 0]
 
     def forward(self, x, save_feature=False):
+        print(x.shape)
         x = self.forward_features(x)
         if save_feature:
             feature = x

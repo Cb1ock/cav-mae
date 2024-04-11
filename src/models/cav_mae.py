@@ -41,6 +41,9 @@ class Block(nn.Module):
         self.norm1_v = norm_layer(dim)
         self.attn = Attention(
             dim, num_heads=num_heads, qkv_bias=qkv_bias, attn_drop=attn_drop, proj_drop=drop)
+        # NOTE: 这里去掉了qk_scale
+        # self.attn = Attention(
+        #     dim, num_heads=num_heads, qkv_bias=qkv_bias, qk_scale=qk_scale, attn_drop=attn_drop, proj_drop=drop)
         # NOTE: drop path for stochastic depth, we shall see if this is better than dropout here
         self.drop_path = DropPath(drop_path) if drop_path > 0. else nn.Identity()
         self.norm2 = norm_layer(dim)
@@ -294,8 +297,11 @@ class CAVMAE(nn.Module):
         for blk in self.blocks_a:
             a = blk(a)
 
+        print('before visual encoder', v.shape)
         for blk in self.blocks_v:
             v = blk(v)
+
+        print('after visual encoder', v.shape)
 
         x = torch.cat((a, v), dim=1)
 
@@ -416,14 +422,6 @@ class CAVMAE(nn.Module):
 
         loss = loss_mae + loss_c
 
-        # Run input through self.blocks_v
-        output = self.blocks_v(imgs)
-
-        # Print the output shape
-        print("Output shape:", output.shape)
-
-        # Print the output
-        print("Output:", output)
         
         return loss, loss_mae, loss_mae_a, loss_mae_v, loss_c, mask_a, mask_v, c_acc
 
