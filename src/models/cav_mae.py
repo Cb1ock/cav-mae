@@ -11,10 +11,13 @@ import random
 import torch
 import torch.nn as nn
 import timm
+import sys
 from timm.models.layers import to_2tuple, trunc_normal_, DropPath
 from timm.models.vision_transformer import Attention, Mlp, PatchEmbed, Block
 from .pos_embed import get_2d_sincos_pos_embed
-from src.models.modeling_finetune import vit_base_patch16_160
+basepath = os.path.dirname(os.path.dirname(sys.path[0]))
+sys.path.append(basepath)
+from models.modeling_finetune import vit_base_patch16_160
 class PatchEmbed(nn.Module):
     def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
         super().__init__()
@@ -298,10 +301,15 @@ class CAVMAE(nn.Module):
             a = blk(a)
 
         print('before visual encoder', v.shape)
+        
+        #self.blocks_maedfer
+
         for blk in self.blocks_v:
             v = blk(v)
 
         print('after visual encoder', v.shape)
+
+        #v = self.blocks_maedfer(v)
 
         x = torch.cat((a, v), dim=1)
 
