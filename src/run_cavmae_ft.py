@@ -23,7 +23,8 @@ import warnings
 import json
 from sklearn import metrics
 from traintest_ft import train, validate
-from traintest_ft import calculate_uar, calculate_war
+from sklearn.metrics import f1_score
+from sklearn.metrics import recall_score
 # finetune cav-mae model
 
 print("I am process %s, running on %s: starting (%s)" % (os.getpid(), os.uname()[1], time.asctime()))
@@ -216,7 +217,14 @@ else:
         elif args.metrics == 'acc':
             cur_res = stats[0]['acc']
             print('acc of frame {:d} is {:.4f}'.format(frame, cur_res))
-        res.append(cur_res)
+        elif args.metrics == 'emo':
+            uar = np.mean([stat['uar'] for stat in stats])
+            print('UAR of frame {:d} is {:.2%}'.format(frame, uar))
+            war = np.mean([stat['war'] for stat in stats])
+            print('WAR of frame {:d} is {:.2%}'.format(frame, war))
+            f1 = np.mean([stat['f1'] for stat in stats])
+            print('F1 Score of frame {:d} is {:.2%}'.format(frame, f1))
+            cur_res = uar
 
     # ensemble over frames
     multiframe_pred = np.mean(multiframe_pred, axis=0)
@@ -234,12 +242,14 @@ else:
         print('multi-frame mAP is {:.4f}'.format(mAP))
         res.append(mAP)
     elif args.metrics == 'emo':
-        uar = calculate_uar(np.argmax(target, 1), np.argmax(multiframe_pred, 1))
+        uar = recall_score(np.argmax(target, 1), np.argmax(multiframe_pred, 1), average='macro')
         print('multi-frame UAR is {:.2%}'.format(uar))
         res.append(uar)
-        war = calculate_war(np.argmax(target, 1), np.argmax(multiframe_pred, 1))
+        war = recall_score(np.argmax(target, 1), np.argmax(multiframe_pred, 1), average='weighted')
         print('multi-frame WAR is {:.2%}'.format(war))
         res.append(war)
+        f1 = f1_score(np.argmax(target, 1), np.argmax(multiframe_pred, 1), average='macro')
+        print('multi-frame F1 Score is {:.2%}'.format(f1))
 
 
     np.savetxt(args.exp_dir + '/mul_frame_res.csv', res, delimiter=',')
