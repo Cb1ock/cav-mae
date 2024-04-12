@@ -30,10 +30,6 @@ def calculate_stats(output, target):
     war = metrics.recall_score(np.argmax(target, 1), np.argmax(output, 1), average='weighted')
     f1 = metrics.f1_score(np.argmax(target, 1), np.argmax(output, 1), average='macro')
     
-    # Print global performance metrics
-    print('UAR is {:.2%}, in val func'.format(uar))
-    print('WAR is {:.2%}'.format(war))
-    print('F1 Score is {:.2%}'.format(f1))
 
     # Class-wise statistics
     for k in range(classes_num):

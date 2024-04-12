@@ -161,7 +161,7 @@ def train(audio_model, train_loader, test_loader, args):
         mAUC = np.mean([stat['auc'] for stat in stats if 'auc' in stat])
         acc = stats[0]['acc'] # this is just a trick, acc of each class entry is the same, which is the accuracy of all classes, not class-wise accuracy
 
-        print("UAR in train func: {:.2%}".format(uar))
+        print("UAR : {:.2%}".format(uar))
         print("WAR: {:.2%}".format(war))
         print("F1 Score: {:.2%}".format(f1))  # And this line
         print("mAP: {:.6f}".format(mAP))
