@@ -10,9 +10,9 @@
 
 # run cav-mae pretraining, use smaller lr and batch size, fits smaller GPUs (4*12GB GPUs)
 
-set -x
-. /data/sls/scratch/share-201907/slstoolchainrc
-source /data/sls/scratch/yuangong/avbyol/venv-a5/bin/activate
+# set -x
+# . /data/sls/scratch/share-201907/slstoolchainrc
+# source /data/sls/scratch/yuangong/avbyol/venv-a5/bin/activate
 export TORCH_HOME=../../pretrained_models
 
 model=cav-mae

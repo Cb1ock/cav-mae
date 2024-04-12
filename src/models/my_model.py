@@ -212,10 +212,10 @@ class CAVMAE(nn.Module):
         self.mask_token = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
 
         self.decoder_modality_a = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
-        #self.decoder_modality_v = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
+        self.decoder_modality_v = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
 
         self.decoder_pos_embed_a = nn.Parameter(torch.zeros(1, self.patch_embed_a.num_patches, decoder_embed_dim), requires_grad=tr_pos)  # fixed sin-cos embedding
-        #self.decoder_pos_embed_v = nn.Parameter(torch.zeros(1, self.patch_embed_v.num_patches, decoder_embed_dim), requires_grad=tr_pos)  # fixed sin-cos embedding
+        self.decoder_pos_embed_v = nn.Parameter(torch.zeros(1, self.patch_embed_v.num_patches, decoder_embed_dim), requires_grad=tr_pos)  # fixed sin-cos embedding
 
         self.decoder_blocks = nn.ModuleList([Block(decoder_embed_dim, decoder_num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(decoder_depth)])
 
@@ -504,10 +504,11 @@ class CAVMAE(nn.Module):
 
         # predictor projection
         x_a = self.decoder_pred_a(x[:, :self.patch_embed_a.num_patches, :])
-        x_v = self.decoder_pred_v(x[:, self.patch_embed_a.num_patches:, :])
+        # x_v = self.decoder_pred_v(x[:, self.patch_embed_a.num_patches:, :])
 
         # return audio and video tokens
-        return x_a, x_v
+        #return x_a, x_v
+        return x_a
 
     def forward_contrastive(self, audio_rep, video_rep, bidirect_contrast=False):
         # calculate nce loss for mean-visual representation and mean-audio representation

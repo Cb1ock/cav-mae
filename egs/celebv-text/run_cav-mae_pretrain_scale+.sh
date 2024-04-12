@@ -40,13 +40,13 @@ dataset_std=4.4849
 target_length=1024
 noise=True
 mixup=0.0
-batch_size=120
+batch_size=32
 lr_adapt=False
 
 dataset=audioset
-tr_data=/data/sls/scratch/yuangong/cav-mae/pretrained_model/datafiles/audioset/audioset_2m_cleaned.json
-te_data=/data/sls/scratch/yuangong/cav-mae/pretrained_model/datafiles/audioset/audioset_eval_cleaned.json
-label_csv=/data/sls/scratch/yuangong/convast/egs/audioset/data/class_labels_indices.csv
+tr_data=/home/chenghao/Project/cav-mae/egs/celebv-text/train_data.json
+te_data=/home/chenghao/Project/cav-mae/egs/celebv-text/test_data.json
+label_csv=/home/chenghao/Project/cav-mae/egs/celebv-text/class_labels_indices_celebv.csv
 
 exp_dir=./exp/testmae01-${dataset}-${model}-bal${bal}-lr${lr}-epoch${epoch}-bs${batch_size}-norm${norm_pix_loss}-c${contrast_loss_weight}-p${mae_loss_weight}-tp${tr_pos}-mr-${mask_mode}-${masking_ratio}-a5
 mkdir -p $exp_dir
@@ -62,4 +62,4 @@ CUDA_CACHE_DISABLE=1 python -W ignore ../../src/run_cavmae_pretrain.py --model $
 --norm_pix_loss ${norm_pix_loss} \
 --pretrain_path ${pretrain_path} \
 --mae_loss_weight ${mae_loss_weight} --contrast_loss_weight ${contrast_loss_weight} \
---tr_pos ${tr_pos} --masking_ratio ${masking_ratio} --mask_mode ${mask_mode}
+--tr_pos ${tr_pos} --masking_ratio ${masking_ratio} --mask_mode ${mask_mode} > $exp_dir/log.txt 2>&1

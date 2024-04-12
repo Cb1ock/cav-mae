@@ -23,8 +23,8 @@ freeze_base=False
 head_lr=50 # newly initialized ft layers uses 50 times larger than the base lr
 
 bal=None
-lr=1e-4
-epoch=20
+lr=1e-5
+epoch=10
 lrscheduler_start=2
 lrscheduler_decay=0.5
 lrscheduler_step=1

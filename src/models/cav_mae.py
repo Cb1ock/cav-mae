@@ -300,14 +300,14 @@ class CAVMAE(nn.Module):
         for blk in self.blocks_a:
             a = blk(a)
 
-        print('before visual encoder', v.shape)
+        #print('before visual encoder', v.shape)
         
         #self.blocks_maedfer
 
         for blk in self.blocks_v:
             v = blk(v)
 
-        print('after visual encoder', v.shape)
+        #print('after visual encoder', v.shape)
 
         #v = self.blocks_maedfer(v)
 
