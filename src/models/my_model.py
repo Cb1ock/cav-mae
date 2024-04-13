@@ -19,7 +19,7 @@ from .pos_embed import get_2d_sincos_pos_embed
 import sys
 
 sys.path.append('/home/chenghao/Project/cav-mae')
-from src.models.modeling_finetune import vit_base_patch16_160
+from src.models.modeling_finetune import vit_base_patch16_160, vit_base_dim768_img224
 from src.models.modeling_pretrain import PretrainVisionTransformerEncoder as video_encoder
 from src.models.modeling_pretrain import PretrainVisionTransformerDecoder as video_decoder
 from torchvision import transforms
@@ -76,8 +76,8 @@ class Block(nn.Module):
         return x
 
 # our main proposed model, for pretraining only, for finetuning, use CAVMAEFT class
-class CAVMAE(nn.Module):
-    """ CAV-MAE Model
+class MY_MODULE(nn.Module):
+    """ MY Model
     """
     def __init__(self, img_size=224, audio_length=1024, patch_size=16, in_chans=3,
                  embed_dim=768, modality_specific_depth=11, num_heads=12,
@@ -180,7 +180,7 @@ class CAVMAE(nn.Module):
             lg_no_second=lg_no_second, lg_no_third=lg_no_third,
         )
         self.project_video_avgpool =  nn.AdaptiveAvgPool1d(128)
-        print('video encoder', self.video_encoder)
+        #print('video encoder', self.video_encoder)
         self.video_decoder = video_decoder(
             patch_size=patch_size, 
             num_patches=self.video_encoder.patch_embed.num_patches,
@@ -198,7 +198,7 @@ class CAVMAE(nn.Module):
             init_values=init_values,
             tubelet_size=tubelet_size
         )
-        print('video decoder', self.video_decoder)
+        #print('video decoder', self.video_decoder)
 
         print('Number of Audio Patches: {:d}, Visual Patches: {:d}'.format(self.patch_embed_a.num_patches, self.video_encoder.patch_embed.num_patches))
         # independent normalization layer for audio, visual, and audio-visual
@@ -212,10 +212,10 @@ class CAVMAE(nn.Module):
         self.mask_token = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
 
         self.decoder_modality_a = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
-        self.decoder_modality_v = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
+        #self.decoder_modality_v = nn.Parameter(torch.zeros(1, 1, decoder_embed_dim))
 
         self.decoder_pos_embed_a = nn.Parameter(torch.zeros(1, self.patch_embed_a.num_patches, decoder_embed_dim), requires_grad=tr_pos)  # fixed sin-cos embedding
-        self.decoder_pos_embed_v = nn.Parameter(torch.zeros(1, self.patch_embed_v.num_patches, decoder_embed_dim), requires_grad=tr_pos)  # fixed sin-cos embedding
+        #self.decoder_pos_embed_v = nn.Parameter(torch.zeros(1, self.patch_embed_v.num_patches, decoder_embed_dim), requires_grad=tr_pos)  # fixed sin-cos embedding
 
         self.decoder_blocks = nn.ModuleList([Block(decoder_embed_dim, decoder_num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(decoder_depth)])
 
@@ -436,7 +436,7 @@ class CAVMAE(nn.Module):
         
         _, _, T, _, _ = v.shape
         v = self.video_encoder(v, mask_v) # [B, N_vis, C_e]
-        v = self.project_video_avgpool(v.transpose(1, 2)).transpose(1, 2)
+        #v = self.project_video_avgpool(v.transpose(1, 2)).transpose(1, 2)
         print('after video encoder', v.shape)
         
         ####################################################################
@@ -631,9 +631,9 @@ class CAVMAE(nn.Module):
         return a, v
 
 # the finetuned CAV-MAE model
-class CAVMAEFT(nn.Module):
+class MY_FT(nn.Module):
     def __init__(self, label_dim, img_size=224, audio_length=1024, patch_size=16, in_chans=3,
-                 embed_dim=768, modality_specific_depth=11, num_heads=12, mlp_ratio=4., norm_layer=nn.LayerNorm, norm_pix_loss=False, tr_pos=True):
+                 embed_dim=768, modality_specific_depth=11, num_heads=12, mlp_ratio=4., norm_layer=nn.LayerNorm, norm_pix_loss=False, tr_pos=True, pretrained_mae_path=None):
         super().__init__()
         timm.models.vision_transformer.Block = Block
         print('Use norm_pix_loss: ', norm_pix_loss)
@@ -657,6 +657,7 @@ class CAVMAEFT(nn.Module):
         self.blocks_v = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(modality_specific_depth)])
         self.blocks_u = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(12 - modality_specific_depth)])
 
+        self.video_encoder = vit_base_dim768_img224()
         self.norm_a = norm_layer(embed_dim)
         self.norm_v = norm_layer(embed_dim)
         self.norm = norm_layer(embed_dim)
@@ -664,6 +665,18 @@ class CAVMAEFT(nn.Module):
         self.mlp_head = nn.Sequential(nn.LayerNorm(embed_dim), nn.Linear(embed_dim, label_dim))
 
         self.initialize_weights()
+        # 加载预训练权重
+        pretrained_weights = torch.load(pretrained_mae_path)
+        # 例子：调整权重字典以匹配模型中的参数键
+        new_state_dict = {}
+        for key in pretrained_weights:
+            # 这里假设只需要调整某些前缀或名称
+            print(key)
+            new_key = key.replace("old_prefix", "new_prefix")
+            new_state_dict[new_key] = pretrained_weights[key]
+
+        self.video_encoder.load_state_dict(new_state_dict, strict=False)  # 使用strict=False允许部分加载
+
 
         print('Audio Positional Embedding Shape:', self.pos_embed_a.shape)
         print('Visual Positional Embedding Shape:', self.pos_embed_v.shape)
@@ -705,21 +718,36 @@ class CAVMAEFT(nn.Module):
     def forward(self, a, v, mode):
         # multi-modal fine-tuning, our default method for fine-tuning
         if mode == 'multimodal':
+            ''' batchsize=32 embeding _dim=768 a_graph_size/(16*16)=512 v_graph_size/(16*16)=196
+            raw a shape torch.Size([16, 1024, 128])
+            raw v shape torch.Size([16, 3, 224, 224])
+            raw a shape torch.Size([16, 1024, 128])
+            raw v shape torch.Size([16, 3, 224, 224])
+            a feature shape torch.Size([16, 512, 768])
+            v feature shape torch.Size([16, 196, 768])
+            a feature shape torch.Size([16, 512, 768])
+            v feature shape torch.Size([16, 196, 768])
+            '''
             a = a.unsqueeze(1)
             a = a.transpose(2, 3)
             a = self.patch_embed_a(a)
             a = a + self.pos_embed_a
             a = a + self.modality_a
 
-            v = self.patch_embed_v(v)
-            v = v + self.pos_embed_v
-            v = v + self.modality_v
+            # v = self.patch_embed_v(v)
+            # v = v + self.pos_embed_v
+            # v = v + self.modality_v
+            # print('after audio encoder shape', a.shape)
+            # print('befoer video encoder shape',v.shape)
+            v = self.video_encoder(v)
+            # print('after video encoder shape',v.shape)
 
+            
             for blk in self.blocks_a:
                 a = blk(a)
 
-            for blk in self.blocks_v:
-                v = blk(v)
+            # for blk in self.blocks_v:
+            #     v = blk(v)
 
             x = torch.cat((a, v), dim=1)
 

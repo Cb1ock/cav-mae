@@ -387,10 +387,10 @@ class VisionTransformer(nn.Module):
                  init_values=0.,
                  use_learnable_pos_emb=False, 
                  init_scale=0.,
-                 all_frames=16,
+                 all_frames=8,
                  tubelet_size=2,
                  use_mean_pooling=True,
-                 keep_temporal_dim=False, # do not perform temporal pooling, has higher priority than 'use_mean_pooling'
+                 keep_temporal_dim=True, # do not perform temporal pooling, has higher priority than 'use_mean_pooling'
                  head_activation_func=None, # activation function after head fc, mainly for the regression task
                  attn_type='joint',
                  lg_region_size=(2, 2, 10), lg_first_attn_type='self', lg_third_attn_type='cross',  # for local_global
@@ -510,10 +510,11 @@ class VisionTransformer(nn.Module):
         self.num_classes = num_classes
         self.head = nn.Linear(self.embed_dim, num_classes) if num_classes > 0 else nn.Identity()
 
-    def forward_features(self, x):
-        print(x.shape)
+    def forward(self, x):
+        #print(x.shape)
         x = self.patch_embed(x)
         B, _, _ = x.size()
+        #print(' after embed shape', x.size())
 
         if self.pos_embed is not None:
             x = x + self.pos_embed.expand(B, -1, -1).type_as(x).to(x.device).clone().detach()
@@ -547,7 +548,9 @@ class VisionTransformer(nn.Module):
             for blk in self.blocks:
                 x = blk(x)
 
+        # print('before norm shape',x.shape)
         x = self.norm(x)
+        
         if self.fc_norm is not None:
             # me: add frame-level prediction support
             if self.keep_temporal_dim:
@@ -556,31 +559,18 @@ class VisionTransformer(nn.Module):
                               hw=self.patch_embed.spatial_num_patches)
                 # spatial mean pooling
                 x = x.mean(-1) # (B, C, T)
+                # print('after norm shape',x.shape)
                 # temporal upsample: 8 -> 16, for patch embedding reduction
                 x = torch.nn.functional.interpolate(
                     x, scale_factor=self.patch_embed.tubelet_size,
-                    mode='linear'
+                    mode='linear',align_corners=False
                 )
+                # print('after norm shape--',x.shape)
                 x = rearrange(x, 'b c t -> b t c')
+                # print('after norm shape===',x.shape)
                 return self.fc_norm(x)
             else:
                 return self.fc_norm(x.mean(1))
-        else:
-            return x[:, 0]
-
-    def forward(self, x, save_feature=False):
-        print(x.shape)
-        x = self.forward_features(x)
-        if save_feature:
-            feature = x
-        x = self.head(x)
-        # me: add head activation function support
-        x = self.head_activation_func(x)
-        # me: add frame-level prediction support
-        if self.keep_temporal_dim:
-            x = x.view(x.size(0), -1) # (B,T,C) -> (B,T*C)
-        if save_feature:
-            return x, feature
         else:
             return x
 
@@ -596,6 +586,14 @@ def vit_base_patch16_160(pretrained=False,depth=12, **kwargs):
     model.default_cfg = _cfg()
     return model
 
+@register_model
+def vit_base_dim768_img224(**kwargs):
+    model = VisionTransformer(
+        img_size=224,
+        patch_size=16, embed_dim=768, num_heads=8,mlp_ratio=4, qkv_bias=True,
+        norm_layer=partial(nn.LayerNorm, eps=1e-6), **kwargs)
+    model.default_cfg=_cfg()
+    return model
 
 @register_model
 def vit_base_dim512_no_depth_patch16_160(pretrained=False, **kwargs):

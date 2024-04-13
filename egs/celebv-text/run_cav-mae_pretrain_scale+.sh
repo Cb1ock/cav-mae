@@ -25,9 +25,10 @@ tr_pos=False
 norm_pix_loss=True
 
 # you can use any checkpoints with a decoder, but by default, we use vision-MAE checkpoint
-cur_dir=$(pwd)
-wget -nc https://www.dropbox.com/s/9nlz523a5q52w86/ori_mae_11.pth?dl=1 -O IN-initial.pth
-pretrain_path=${cur_dir}/IN-initial.pth
+#cur_dir=$(pwd)
+#wget -nc https://www.dropbox.com/s/9nlz523a5q52w86/ori_mae_11.pth?dl=1 -O IN-initial.pth
+#pretrain_path=${cur_dir}/IN-initial.pth
+pretrain_path=../../pretrained_model/audio_model_scale++.pth
 
 bal=None # balanced sampling, should be false for pretraining
 lr=1e-4
@@ -40,7 +41,7 @@ dataset_std=4.4849
 target_length=1024
 noise=True
 mixup=0.0
-batch_size=32
+batch_size=48
 lr_adapt=False
 
 dataset=audioset

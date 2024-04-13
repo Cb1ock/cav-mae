@@ -17,7 +17,7 @@ from timm.models.vision_transformer import Attention, Mlp, PatchEmbed, Block
 from .pos_embed import get_2d_sincos_pos_embed
 basepath = os.path.dirname(os.path.dirname(sys.path[0]))
 sys.path.append(basepath)
-from models.modeling_finetune import vit_base_patch16_160
+#from models.modeling_finetune import vit_base_patch16_160
 class PatchEmbed(nn.Module):
     def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
         super().__init__()
@@ -101,7 +101,7 @@ class CAVMAE(nn.Module):
         self.blocks_a = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(modality_specific_depth)])
         # visual-branch
         self.blocks_v = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(modality_specific_depth)])
-        self.blocks_maedfer = vit_base_patch16_160()
+        
         # unified branch
         self.blocks_u = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(12-modality_specific_depth)])
 
