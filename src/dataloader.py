@@ -81,6 +81,8 @@ class AudiosetDataset(Dataset):
         self.timem = self.audio_conf.get('timem', 0)
         print('now using following mask: {:d} freq, {:d} time'.format(self.audio_conf.get('freqm'), self.audio_conf.get('timem')))
         self.mixup = self.audio_conf.get('mixup', 0)
+        self.num_frames = self.audio_conf.get('num_frames', 8)
+        self.wanted = self.audio_conf.get('wanted', 'img')
         print('now using mix-up with rate {:f}'.format(self.mixup))
         self.dataset = self.audio_conf.get('dataset')
         print('now process ' + self.dataset)
@@ -160,6 +162,33 @@ class AudiosetDataset(Dataset):
 
             image_tensor = mix_lambda * image_tensor1 + (1 - mix_lambda) * image_tensor2
             return image_tensor
+        
+    def get_video(self, filenames, filenames2=None, mix_lambda=1):
+        if filenames2 == None:
+            for filename in filenames:
+                img = Image.open(filename)
+                image_tensor = self.preprocess(img)
+                image_tensor = image_tensor.unsqueeze(1)
+                try:
+                    video_tensor = torch.cat((video_tensor, image_tensor), 1)
+                except:
+                    video_tensor = image_tensor
+        else:
+            for i in range(len(filenames)):
+                img1 = Image.open(filenames[i])
+                image_tensor1 = self.preprocess(img1)
+
+                img2 = Image.open(filenames2[i])
+                image_tensor2 = self.preprocess(img2)
+
+                image_tensor = mix_lambda * image_tensor1 + (1 - mix_lambda) * image_tensor2
+                image_tensor = image_tensor.unsqueeze(1)
+                try:
+                    video_tensor = torch.cat((video_tensor, image_tensor), 1)
+                except:
+                    video_tensor = image_tensor
+        return video_tensor
+
 
     def _wav2fbank(self, filename, filename2=None, mix_lambda=-1):
         # no mixup
@@ -223,26 +252,64 @@ class AudiosetDataset(Dataset):
         out_path = video_path + '/frame_' + str(frame_idx) + '/' + video_id + '.jpg'
         #print(out_path)
         return out_path
+    
+    def select_frames_from_folder(self, video_id, video_path):
+        """
+        从指定的文件夹中选择连续的帧。
+        :param folder_path: 存储帧的文件夹路径
+        :param num_frames: 要选择的帧数
+        :return: numpy 数组的列表，每个数组代表一个帧的图像数据
+        """
+        num_elements_to_remove = 10 - self.num_frames
+        output_path = []
+        for i in range(10):
+            if os.path.exists(video_path + '/frame_' + str(i) + '/' + video_id + '.jpg'):
+                output_path.append(video_path + '/frame_' + str(i) + '/' + video_id + '.jpg')
+
+        elements_to_remove = random.sample(output_path, num_elements_to_remove)
+        frames = [element for element in output_path if element not in elements_to_remove]
+    
+        return frames # list of choosen frames
 
     def __getitem__(self, index):
+        # 检查是否进行数据混合操作
         if random.random() < self.mixup:
+            # 获取指定索引的数据并解码
             datum = self.data[index]
             datum = self.decode_data(datum)
+            # 随机选择另一样本进行混合
             mix_sample_idx = random.randint(0, self.num_samples-1)
             mix_datum = self.data[mix_sample_idx]
             mix_datum = self.decode_data(mix_datum)
-            # get the mixed fbank
+            
+            # 生成混合参数，使用beta分布
             mix_lambda = np.random.beta(10, 10)
+            # 尝试生成混合的频谱图，如果失败则生成默认频谱图并输出错误信息
             try:
                 fbank = self._wav2fbank(datum['wav'], mix_datum['wav'], mix_lambda)
             except:
                 fbank = torch.zeros([self.target_length, 128]) + 0.01
                 print('there is an error in loading audio')
+            
+            #尝试获取和处理混合的图像，如果失败则生成默认图像并输出错误信息
             try:
-                image = self.get_image(self.randselect_img(datum['video_id'], datum['video_path']), self.randselect_img(mix_datum['video_id'], datum['video_path']), mix_lambda)
+                image = self.get_image(
+                    self.randselect_img(datum['video_id'], datum['video_path']),
+                    self.randselect_img(mix_datum['video_id'], datum['video_path']),
+                    mix_lambda)
             except:
                 image = torch.zeros([3, self.im_res, self.im_res]) + 0.01
                 print('there is an error in loading image')
+            try:
+                video = self.get_video(
+                    self.select_frames_from_folder(datum['video_id'], datum['video_path']),
+                    self.select_frames_from_folder(mix_datum['video_id'], mix_datum['video_path']),
+                    mix_lambda)
+            except:
+                video = torch.zeros([3, self.num_frames, self.im_res, self.im_res]) + 0.01
+                print('there is an error in loading video')
+            
+            # 初始化标签向量并根据混合比例调整标签权重
             label_indices = np.zeros(self.label_num) + (self.label_smooth / self.label_num)
             for label_str in datum['labels'].split(','):
                 label_indices[int(self.index_dict[label_str])] += mix_lambda * (1.0 - self.label_smooth)
@@ -251,6 +318,7 @@ class AudiosetDataset(Dataset):
             label_indices = torch.FloatTensor(label_indices)
 
         else:
+            # 非混合情况下处理单一样本
             datum = self.data[index]
             datum = self.decode_data(datum)
             # label smooth for negative samples, epsilon/label_num
@@ -260,16 +328,23 @@ class AudiosetDataset(Dataset):
             except:
                 fbank = torch.zeros([self.target_length, 128]) + 0.01
                 print('there is an error in loading audio')
+            
             try:
                 image = self.get_image(self.randselect_img(datum['video_id'], datum['video_path']), None, 0)
             except:
                 image = torch.zeros([3, self.im_res, self.im_res]) + 0.01
                 print('there is an error in loading image')
+            try:
+                video = self.get_video(self.select_frames_from_folder(datum['video_id'], datum['video_path']), None, 0)
+            except:
+                video = torch.zeros([3, self.num_frames, self.im_res, self.im_res]) + 0.01
+                print('there is an error in loading video')
+
             for label_str in datum['labels'].split(','):
                 label_indices[int(self.index_dict[label_str])] = 1.0 - self.label_smooth
             label_indices = torch.FloatTensor(label_indices)
 
-        # SpecAug, not do for eval set
+        # 应用频率和时间掩码进行音频增强
         freqm = torchaudio.transforms.FrequencyMasking(self.freqm)
         timem = torchaudio.transforms.TimeMasking(self.timem)
         fbank = torch.transpose(fbank, 0, 1)
@@ -281,19 +356,24 @@ class AudiosetDataset(Dataset):
         fbank = fbank.squeeze(0)
         fbank = torch.transpose(fbank, 0, 1)
 
-        # normalize the input for both training and test
-        if self.skip_norm == False:
+        # 根据设置决定是否对频谱图进行规范化
+        if not self.skip_norm:
             fbank = (fbank - self.norm_mean) / (self.norm_std)
         # skip normalization the input ONLY when you are trying to get the normalization stats.
         else:
             pass
 
-        if self.noise == True:
-            fbank = fbank + torch.rand(fbank.shape[0], fbank.shape[1]) * np.random.rand() / 10
+        # 如果设置了添加噪声，则在频谱图中添加随机噪声
+        if self.noise:
+            fbank += torch.rand(fbank.shape[0], fbank.shape[1]) * np.random.rand() / 10
             fbank = torch.roll(fbank, np.random.randint(-self.target_length, self.target_length), 0)
 
-        # fbank shape is [time_frame_num, frequency_bins], e.g., [1024, 128]
-        return fbank, image, label_indices
+        # 返回处理完的频谱图、图像和标签向量
+        if self.wanted == 'img':
+            return fbank, image, label_indices
+        elif self.wanted == 'video':
+            return fbank, video, label_indices
+
 
     def __len__(self):
         return self.num_samples

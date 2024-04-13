@@ -19,7 +19,7 @@ from .pos_embed import get_2d_sincos_pos_embed
 import sys
 
 sys.path.append('/home/chenghao/Project/cav-mae')
-from src.models.modeling_finetune import vit_base_patch16_160, vit_base_dim768_img224
+from src.models.modeling_finetune import vit_base_patch16_160, vit_base_dim768_img224, vit_base_dim512_no_depth_patch16_160
 from src.models.modeling_pretrain import PretrainVisionTransformerEncoder as video_encoder
 from src.models.modeling_pretrain import PretrainVisionTransformerDecoder as video_decoder
 from torchvision import transforms
@@ -657,25 +657,14 @@ class MY_FT(nn.Module):
         self.blocks_v = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(modality_specific_depth)])
         self.blocks_u = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(12 - modality_specific_depth)])
 
-        self.video_encoder = vit_base_dim768_img224()
+        self.video_encoder = vit_base_dim768_img224() #vit_base_dim512_no_depth_patch16_160()
         self.norm_a = norm_layer(embed_dim)
         self.norm_v = norm_layer(embed_dim)
         self.norm = norm_layer(embed_dim)
 
         self.mlp_head = nn.Sequential(nn.LayerNorm(embed_dim), nn.Linear(embed_dim, label_dim))
 
-        self.initialize_weights()
-        # 加载预训练权重
-        pretrained_weights = torch.load(pretrained_mae_path)
-        # 例子：调整权重字典以匹配模型中的参数键
-        new_state_dict = {}
-        for key in pretrained_weights:
-            # 这里假设只需要调整某些前缀或名称
-            print(key)
-            new_key = key.replace("old_prefix", "new_prefix")
-            new_state_dict[new_key] = pretrained_weights[key]
-
-        self.video_encoder.load_state_dict(new_state_dict, strict=False)  # 使用strict=False允许部分加载
+        self.initialize_weights(pretrained_mae_path)
 
 
         print('Audio Positional Embedding Shape:', self.pos_embed_a.shape)
@@ -688,7 +677,7 @@ class MY_FT(nn.Module):
         print(test_output.shape)
         return test_output.shape[2], test_output[3], test_output[2] * test_output[2]
 
-    def initialize_weights(self):
+    def initialize_weights(self, pretrained_mae_path=None):
         pos_embed_a = get_2d_sincos_pos_embed(self.pos_embed_a.shape[-1], 8, int(self.patch_embed_a.num_patches/8), cls_token=False)
         self.pos_embed_a.data.copy_(torch.from_numpy(pos_embed_a).float().unsqueeze(0))
 
@@ -702,6 +691,25 @@ class MY_FT(nn.Module):
 
         torch.nn.init.normal_(self.modality_a, std=.02)
         torch.nn.init.normal_(self.modality_v, std=.02)
+
+        # 加载预训练权重
+        ckt = torch.load(pretrained_mae_path)
+        # 例子：调整权重字典以匹配模型中的参数键
+        # print(ckt.keys())
+
+        msg = self.video_encoder.load_state_dict(ckt['model'], strict=False)  # 使用strict=False允许部分加载
+        
+        # # 获取所有权重的键
+        # all_keys = set(ckt['model'].keys())
+
+        # # 获取未加载的权重的键
+        # missing_keys = set(msg.missing_keys)
+
+        # # 计算成功加载的权重的键
+        # loaded_keys = all_keys - missing_keys
+
+        # # 打印成功加载的权重的键
+        # print("Loaded keys:", loaded_keys)
 
         self.apply(self._init_weights)
 
