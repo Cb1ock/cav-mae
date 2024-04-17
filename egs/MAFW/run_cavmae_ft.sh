@@ -7,7 +7,7 @@ set -x
 export TORCH_HOME=../../pretrained_models
 
 model=cav-mae-ft
-ftmode=multimodal # or audioonly or videoonly
+ftmode=videoonly # or audioonly or videoonly or multimodal
 
 # you can replace with any checkpoint you want, but by default, we use cav-mae-scale++
 cur_dir=$(pwd)
@@ -17,11 +17,14 @@ cur_dir=$(pwd)
 # pretrain_path=../celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr5e-5-epoch25-bs16-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/best_audio_model.pth
 # pretrain_model=my_pretrained
 
-pretrain_path=../celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr1e-4-epoch25-bs32-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/best_audio_model.pth
-pretrain_model=my_pretrained_biger
+# pretrain_path=../celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr1e-4-epoch25-bs32-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/best_audio_model.pth
+# pretrain_model=my_pretrained_biger
 
-# pretrain_path=/home/chenghao/Project/cav-mae/pretrained_model/audio_model_scale++.pth
-# pretrain_model=cav-mae_pretrained_scale++
+pretrain_path=/home/chenghao/Project/cav-mae/pretrained_model/audio_model_scale++.pth
+pretrain_model=cav-mae_pretrained_scale++
+
+# pretrain_path=../celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr1e-4-epoch25-bs40-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/best_audio_model.pth
+# pretrain_model=my_pretrained_again
 
 # pretrain_path=/home/chenghao/Project/cav-mae/pretrained_model/audio_model_base.pth
 # pretrain_model=cav-mae_pretrained_base

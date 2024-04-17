@@ -19,12 +19,13 @@ from .pos_embed import get_2d_sincos_pos_embed
 import sys
 
 sys.path.append('/home/chenghao/Project/cav-mae')
-from src.models.modeling_finetune import vit_base_patch16_160, vit_base_dim768_img224, vit_base_dim512_no_depth_patch16_160
+from src.models.modeling_finetune import vit_base_patch16_160
 from src.models.modeling_pretrain import PretrainVisionTransformerEncoder as video_encoder
 from src.models.modeling_pretrain import PretrainVisionTransformerDecoder as video_decoder
 from torchvision import transforms
 from src.masking_generator import TubeMaskingGenerator, TubeWindowMaskingGenerator
 from src.transforms import GroupNormalize, GroupMultiScaleCrop, IdentityTransform, Stack, ToTorchFormatTensor
+from collections import OrderedDict
 
 class PatchEmbed(nn.Module):
     def __init__(self, img_size=224, patch_size=16, in_chans=3, embed_dim=768):
@@ -81,7 +82,7 @@ class MY_MODULE(nn.Module):
     """
     def __init__(self, img_size=224, audio_length=1024, patch_size=16, in_chans=3,
                  embed_dim=768, modality_specific_depth=11, num_heads=12,
-                 decoder_embed_dim=512, decoder_depth=8, decoder_num_heads=16,
+                 decoder_embed_dim=768, decoder_depth=8, decoder_num_heads=16,
                  mlp_ratio=4., norm_layer=nn.LayerNorm, norm_pix_loss=False, tr_pos=False):
         super().__init__()
         print('A CAV-MAE Model')
@@ -298,7 +299,7 @@ class MY_MODULE(nn.Module):
         """
         Perform per-sample random masking by per-sample shuffling.
         Per-sample shuffling is done by argsort random noise.
-        x: [N, L, D], sequence
+        x: [N, L, D], sequence [8, 1024, 128]
         """
         N, L, D = x.shape  # batch, length, dim
         len_keep = int(L * (1 - mask_ratio))
@@ -633,7 +634,8 @@ class MY_MODULE(nn.Module):
 # the finetuned CAV-MAE model
 class MY_FT(nn.Module):
     def __init__(self, label_dim, img_size=224, audio_length=1024, patch_size=16, in_chans=3,
-                 embed_dim=768, modality_specific_depth=11, num_heads=12, mlp_ratio=4., norm_layer=nn.LayerNorm, norm_pix_loss=False, tr_pos=True, pretrained_mae_path=None):
+                 embed_dim=768, modality_specific_depth=11, num_heads=12, mlp_ratio=4., norm_layer=nn.LayerNorm, norm_pix_loss=False, tr_pos=True, 
+                 pretrained_mae_path=None, forzen_mae=False):
         super().__init__()
         timm.models.vision_transformer.Block = Block
         print('Use norm_pix_loss: ', norm_pix_loss)
@@ -657,13 +659,24 @@ class MY_FT(nn.Module):
         self.blocks_v = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(modality_specific_depth)])
         self.blocks_u = nn.ModuleList([Block(embed_dim, num_heads, mlp_ratio, qkv_bias=True, qk_scale=None, norm_layer=norm_layer) for i in range(12 - modality_specific_depth)])
 
-        self.video_encoder = vit_base_dim768_img224() #vit_base_dim512_no_depth_patch16_160()
+        self.video_encoder = vit_base_patch16_160()
+
+        self.embed_dim_changer = nn.Linear(512,768)
+        self.pool = nn.AdaptiveAvgPool1d(8)
+        self.v_embed_dim = 512
+        v_embed_dim = self.v_embed_dim
+        if forzen_mae:
+            # 冻结 video_encoder 的所有参数
+            for param in self.video_encoder.parameters():
+                param.requires_grad = False
+
         self.norm_a = norm_layer(embed_dim)
-        self.norm_v = norm_layer(embed_dim)
+        #self.norm_v = norm_layer(embed_dim)
+        self.my_norm_v = norm_layer(v_embed_dim)
         self.norm = norm_layer(embed_dim)
 
         self.mlp_head = nn.Sequential(nn.LayerNorm(embed_dim), nn.Linear(embed_dim, label_dim))
-
+        self.v_mlp_head = nn.Sequential(nn.LayerNorm(v_embed_dim), nn.Linear(v_embed_dim, label_dim))
         self.initialize_weights(pretrained_mae_path)
 
 
@@ -692,24 +705,21 @@ class MY_FT(nn.Module):
         torch.nn.init.normal_(self.modality_a, std=.02)
         torch.nn.init.normal_(self.modality_v, std=.02)
 
-        # 加载预训练权重
-        ckt = torch.load(pretrained_mae_path)
-        # 例子：调整权重字典以匹配模型中的参数键
-        # print(ckt.keys())
+        checkpoint = torch.load(pretrained_mae_path, map_location='cpu')
 
-        msg = self.video_encoder.load_state_dict(ckt['model'], strict=False)  # 使用strict=False允许部分加载
-        
-        # # 获取所有权重的键
-        # all_keys = set(ckt['model'].keys())
+        # 权重名称不匹配
+        checkpoint_model = checkpoint['model']
+        new_state_dict = OrderedDict()
+        for key, value in checkpoint_model.items():
+            if key.startswith('encoder.'):
+                #print('here')
+                new_key = key.replace('encoder.', '')  # 去掉 'encoder.'
+                new_state_dict[new_key] = value
+            else:
+                new_state_dict[key] = value
 
-        # # 获取未加载的权重的键
-        # missing_keys = set(msg.missing_keys)
+        self.video_encoder.load_state_dict(new_state_dict, strict=False)
 
-        # # 计算成功加载的权重的键
-        # loaded_keys = all_keys - missing_keys
-
-        # # 打印成功加载的权重的键
-        # print("Loaded keys:", loaded_keys)
 
         self.apply(self._init_weights)
 
@@ -745,11 +755,20 @@ class MY_FT(nn.Module):
             # v = self.patch_embed_v(v)
             # v = v + self.pos_embed_v
             # v = v + self.modality_v
-            # print('after audio encoder shape', a.shape)
+            #print('after audio encoder shape', a.shape)
             # print('befoer video encoder shape',v.shape)
             v = self.video_encoder(v)
-            # print('after video encoder shape',v.shape)
+            #print('after video encoder shape',v.shape) #(batch_size, num_frames ,embed_dim)
 
+            v = v.reshape(-1,512)
+            v = self.embed_dim_changer(v)
+            v = v.reshape(-1, 8, 768)
+            
+            a = a.transpose(1, 2)
+            a = self.pool(a)
+            a = a.transpose(1, 2)
+
+            #print('after video view shape', v.shape)
             
             for blk in self.blocks_a:
                 a = blk(a)
@@ -788,19 +807,22 @@ class MY_FT(nn.Module):
 
         # finetune with only image (and inference with only audio when the model is finetuned with only image)
         elif mode == 'videoonly':
-            v = self.patch_embed_v(v)
-            v = v + self.pos_embed_v
-            v = v + self.modality_v
+            v = self.video_encoder(v) #(batch_size, num_frames ,embed_dim)
 
-            for blk in self.blocks_v:
-                v = blk(v)
+            # v = self.patch_embed_v(v)
+            # v = v + self.pos_embed_v
+            # v = v + self.modality_v
 
-            # note here uses the 'v' normalization, it is used in both training and inference, so it is fine
-            for blk in self.blocks_u:
-                v = blk(v, 'v')
-            v = self.norm_v(v)
+            # for blk in self.blocks_v:
+            #     v = blk(v)
+
+            # # note here uses the 'v' normalization, it is used in both training and inference, so it is fine
+            # for blk in self.blocks_u:
+            #     v = blk(v, 'v')
+
+            v = self.my_norm_v(v)
             x = v.mean(dim=1)
-            x = self.mlp_head(x)
+            x = self.v_mlp_head(x)
             return x
 
         # used in case that the model is finetuned with both modality, but in inference only audio is given
@@ -849,7 +871,7 @@ class MY_FT(nn.Module):
 
             for blk in self.blocks_u:
                 v = blk(v, 'v') # note here use modality-specific normalization
-            v = self.norm_v(v)
+            v = self.my_norm_v(v)
             v = v.mean(dim=1)
 
             # average the output of the two forward passes
@@ -884,7 +906,7 @@ class MY_FT(nn.Module):
             for blk in self.blocks_u:
                 v = blk(v, 'v')
 
-            v = self.norm_v(v)
+            v = self.my_norm_v(v)
             return a, v
 
         # return only audio

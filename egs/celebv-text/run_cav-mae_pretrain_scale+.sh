@@ -41,7 +41,7 @@ dataset_std=4.4849
 target_length=1024
 noise=True
 mixup=0.0
-batch_size=48
+batch_size=40
 lr_adapt=False
 
 dataset=audioset

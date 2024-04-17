@@ -170,8 +170,16 @@ def train(audio_model, train_loader, test_loader, args):
         print("train_loss: {:.6f}".format(loss_meter.avg))
         print("valid_loss: {:.6f}".format(valid_loss))
 
-        result[epoch-1, :] = [acc, mAP, mAUC, uar, war, optimizer.param_groups[0]['lr']]
-        np.savetxt(exp_dir + '/result.csv', result, delimiter=',')
+        import pandas as pd
+
+        # 列名列表
+        column_names = ['acc', 'mAP', 'mAUC', 'uar', 'war', 'lr']
+
+        # 将结果数组转换为数据框，并设置列名
+        df = pd.DataFrame(result, columns=column_names)
+
+        # 将数据框保存为CSV文件
+        df.to_csv(exp_dir + '/result.csv', index=False)
         print('validation finished')
 
         if war > best_war:

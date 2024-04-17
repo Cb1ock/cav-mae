@@ -122,6 +122,7 @@ class AudiosetDataset(Dataset):
 
         # by default, all models use 224*224, other resolutions are not tested
         self.im_res = self.audio_conf.get('im_res', 224)
+        print(self.im_res)
         print('now using {:d} * {:d} image input'.format(self.im_res, self.im_res))
         self.preprocess = T.Compose([
             T.Resize(self.im_res, interpolation=PIL.Image.BICUBIC),

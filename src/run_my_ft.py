@@ -81,6 +81,8 @@ parser.add_argument('--skip_frame_agg', help='if do frame agg', type=ast.literal
 
 parser.add_argument("--frames", type=int, default=8, help="number of frames used in the model")
 parser.add_argument("--pretrained_mae_path", type=str, default=None, help="pretrained mae model path")
+parser.add_argument("--forzen_mae", type=bool, default=False, help='if true, forzen mae-dfer model paramenter')
+parser.add_argument('--wanted', type=str, default='video', help='video or img')
 args = parser.parse_args()
 
 
@@ -90,11 +92,11 @@ import numpy as np
 
 
 # all exp in this work is based on 224 * 224 image
-im_res = 224
-audio_conf = {'num_mel_bins': 128, 'target_length': args.target_length, 'freqm': args.freqm, 'timem': args.timem, 'mixup': args.mixup, 'frames': args.frames,'wanted' : 'video',
+im_res = 160
+audio_conf = {'num_mel_bins': 128, 'target_length': args.target_length, 'freqm': args.freqm, 'timem': args.timem, 'mixup': args.mixup, 'frames': args.frames,'wanted' : args.wanted,
               'dataset': args.dataset, 'mode':'train', 'mean':args.dataset_mean, 'std':args.dataset_std,
               'noise':args.noise, 'label_smooth': args.label_smooth, 'im_res': im_res}
-val_audio_conf = {'num_mel_bins': 128, 'target_length': args.target_length, 'freqm': 0, 'timem': 0, 'mixup': 0, 'dataset': args.dataset, 'frames': args.frames,
+val_audio_conf = {'num_mel_bins': 128, 'target_length': args.target_length, 'freqm': 0, 'timem': 0, 'mixup': 0, 'dataset': args.dataset, 'frames': args.frames,'wanted' : args.wanted,
                   'mode':'eval', 'mean': args.dataset_mean, 'std': args.dataset_std, 'noise': False, 'im_res': im_res}
 
 if args.bal == 'bal':
@@ -128,7 +130,7 @@ if args.model == 'cav-mae-ft':
     audio_model = models.CAVMAEFT(label_dim=args.n_class, modality_specific_depth=11)
 elif args.model == 'my-ft':
     print('finetune my model with cav-mae audio part and mae-dfer video part')
-    audio_model = models.MY_FT(label_dim=args.n_class, modality_specific_depth=11, pretrained_mae_path=args.pretrained_mae_path)
+    audio_model = models.MY_FT(label_dim=args.n_class, modality_specific_depth=11, pretrained_mae_path=args.pretrained_mae_path, forzen_mae=args.forzen_mae)
 else:
     raise ValueError('model not supported')
 

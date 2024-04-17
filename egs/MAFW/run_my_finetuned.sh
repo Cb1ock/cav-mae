@@ -7,7 +7,7 @@ set -x
 export TORCH_HOME=../../pretrained_models
 
 model=my-ft
-ftmode=multimodal # or audioonly or videoonly
+ftmode=videoonly # or audioonly or videoonly or multimodal
 
 # you can replace with any checkpoint you want, but by default, we use cav-mae-scale++
 cur_dir=$(pwd)
@@ -17,22 +17,25 @@ cur_dir=$(pwd)
 # pretrain_path=../celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr5e-5-epoch25-bs16-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/best_audio_model.pth
 # pretrain_model=my_pretrained
 
-pretrain_path=../celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr1e-4-epoch25-bs32-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/best_audio_model.pth
-pretrain_model=my_pretrained_biger
+# pretrain_path=../celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr1e-4-epoch25-bs32-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/best_audio_model.pth
+# pretrain_model=my_pretrained_biger
 
-# pretrain_path=/home/chenghao/Project/cav-mae/pretrained_model/audio_model_scale++.pth
-# pretrain_model=cav-mae_pretrained_scale++
+# pretrain_path=../celebv-text/exp/testmae01-audioset-cav-mae-balNone-lr1e-4-epoch25-bs40-normTrue-c0.01-p1.0-tpFalse-mr-unstructured-0.75-a5/models/best_audio_model.pth
+# pretrain_model=my_pretrained_again
+
+pretrain_path=/home/chenghao/Project/cav-mae/pretrained_model/audio_model_scale++.pth
+pretrain_model=cav-mae_pretrained_scale++
 
 # pretrain_path=/home/chenghao/Project/cav-mae/pretrained_model/audio_model_base.pth
 # pretrain_model=cav-mae_pretrained_base
 
-pretrained_mae_path=../../pretrained_model/pretrained_maedfer.pth
+pretrained_mae_path=../../pretrained_model/pretrained_videomae.pth
 
 freeze_base=False
 head_lr=50 # newly initialized ft layers uses 50 times larger than the base lr
 
 bal=None
-lr=1e-4
+lr=2e-4
 epoch=10
 lrscheduler_start=2
 lrscheduler_decay=0.5
@@ -48,20 +51,21 @@ noise=True
 freqm=48
 timem=192
 mixup=0.5
-batch_size=24
+batch_size=32
 label_smooth=0.1
-
+forzen_mae=False
 dataset=audioset
 tr_data=train_data.json
 te_data=test_data.json
 label_csv=class_labels_indices_mafw.csv
 
 
-exp_dir=./exp/testmae01-full-${model}-${lr}-${lrscheduler_start}-${lrscheduler_decay}-${lrscheduler_step}-bs${batch_size}-lda${lr_adapt}-${ftmode}-fz${freeze_base}-h${head_lr}-r3-${pretrain_model}
+exp_dir=./exp/testmae01-full-${model}-${lr}-${forzen_mae}-bs${batch_size}-lda${lr_adapt}-${ftmode}-fz${freeze_base}-h${head_lr}-r3-${pretrain_model}
 mkdir -p $exp_dir
 
 CUDA_VISABLE_DEVICE=0,1 python -W ignore /home/chenghao/Project/cav-mae/src/run_my_ft.py --model ${model} --dataset ${dataset} \
 --data-train ${tr_data} --data-val ${te_data} --exp-dir $exp_dir \
+--forzen_mae ${forzen_mae} \
 --pretrained_mae_path ${pretrained_mae_path} \
 --label-csv ${label_csv} --n_class 11 \
 --lr $lr --n-epochs ${epoch} --batch-size $batch_size --save_model True \
